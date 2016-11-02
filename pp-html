@@ -47,10 +47,10 @@ r2 = re.compile(r'^<p class="date">Date: ')
 r3 = re.compile(r'^<a href="http://validator.w3.org/check')
 r4 = re.compile(r'^<!-- \d{4}-\d{2}\-\d{2} ')
 
-for f in glob.glob('../www/*.html')+glob.glob('../www/note/*.html'):
+for f in glob.glob('./html/*.html')+glob.glob('./html/note/*.html'):
     if f.find('resume') != -1: continue # don't process my resume.
     xs = open(f,'r').readlines()
-    id = f[len('../www/'):]
+    id = f[len('./html/'):]
     ds=[]
     for x in xs:
         x = x[:-1] # strip trailing \n
@@ -71,12 +71,12 @@ for f in glob.glob('../www/*.html')+glob.glob('../www/note/*.html'):
     open(f,'w').writelines(map(lambda x:x + '\n', ds))
 
 site = 'http://dirtysalt.info/'
-files = glob.glob('*.org') + glob.glob('note/*.org')
+files = glob.glob('./src/*.org') + glob.glob('./src/note/*.org')
 with open('sitemap.txt', 'w') as fh:
-    fh.writelines(map(lambda x: site + x[:-3] + 'html\n', files))
+    fh.writelines(map(lambda x: site + x[len('./src/'):-3] + 'html\n', files))
 with open('sitemap.xml', 'w') as fh:
     fh.write("""<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     """)
-    fh.writelines(map(lambda x: '<url><loc>{}</loc></url>\n'.format(site + x[:-3] + 'html'), files))
+    fh.writelines(map(lambda x: '<url><loc>{}</loc></url>\n'.format(site + x[len('./src/'):-3] + 'html'), files))
     fh.write('</urlset>\n')

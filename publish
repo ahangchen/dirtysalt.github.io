@@ -1,0 +1,31 @@
+#!/bin/bash
+# publish org files.
+
+# find emacs binary.
+kernel=`uname -s`
+emacs="emacs"
+if [ $kernel"X" == "DarwinX" ]
+then
+    emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
+fi
+
+# git checkout gitcafe-pages
+# git pull gitcafe gitcafe-pages
+git pull origin master
+
+# generate html files.
+$emacs --batch --script publish.el
+if [ $? != 0 ]
+then
+    echo "publish failed!"
+    exit 1
+fi
+
+# post processing html files.
+./pp-html
+
+git add *
+git commit -a -m 'x'
+
+# git push gitcafe gitcafe-pages
+git push origin master

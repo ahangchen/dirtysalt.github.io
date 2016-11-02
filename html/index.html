@@ -18,21 +18,33 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline1">1. Operating System</a></li>
-<li><a href="#orgheadline2">2. Network Programming</a></li>
-<li><a href="#orgheadline3">3. Storage System</a></li>
-<li><a href="#orgheadline4">4. Algorithm / ML / Compression</a></li>
+<li><a href="#orgheadline1">1. On The Top</a></li>
+<li><a href="#orgheadline2">2. Operating System</a></li>
+<li><a href="#orgheadline3">3. Network Programming</a></li>
+<li><a href="#orgheadline4">4. Storage System</a></li>
 <li><a href="#orgheadline5">5. Distributed System</a></li>
-<li><a href="#orgheadline6">6. Programming Language</a></li>
-<li><a href="#orgheadline7">7. Software Design</a></li>
-<li><a href="#orgheadline8">8. Misc Books</a></li>
+<li><a href="#orgheadline6">6. Algorithm</a></li>
+<li><a href="#orgheadline7">7. Programming Language</a></li>
+<li><a href="#orgheadline8">8. Software Design</a></li>
+<li><a href="#orgheadline9">9. Machine Learning</a></li>
+<li><a href="#orgheadline10">10. Compression</a></li>
+<li><a href="#orgheadline11">11. Misc Books</a></li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-orgheadline1" class="outline-2">
-<h2 id="orgheadline1"><span class="section-number-2">1</span> Operating System</h2>
+<h2 id="orgheadline1"><span class="section-number-2">1</span> On The Top</h2>
 <div class="outline-text-2" id="text-1">
+<p>
+<a href="jobs.html">Jobs</a> - <a href="links.html">Links</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline2" class="outline-2">
+<h2 id="orgheadline2"><span class="section-number-2">2</span> Operating System</h2>
+<div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li><a href="computer-system-reading.html">Computer System Reading</a> 单机系统方面的一些文章
 <ul class="org-ul">
@@ -97,9 +109,9 @@
 </div>
 </div>
 
-<div id="outline-container-orgheadline2" class="outline-2">
-<h2 id="orgheadline2"><span class="section-number-2">2</span> Network Programming</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-orgheadline3" class="outline-2">
+<h2 id="orgheadline3"><span class="section-number-2">3</span> Network Programming</h2>
+<div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li><a href="unp.html">UNP</a> Unix网络编程(Unix Network Programming),W. Richard Stevens的又一神作。笔记里面只是对于TCP原理有比较详细讨论，这部分笔记也包含了TCP Illustrated v1里面和TCP相关的章节内容。对于编程方面也着重TCP socket使用，毕竟在大部分应用场景下面我们选用TCP模型更多，并且TCP里面有很多非常琐碎的知识。</li>
 <li><a href="https://github.com/dirtysalt/tomb/tree/master/cc/itachi">itachi</a> 自己两天时间写完的异步网络编程框架，当然有很多地方需要改进，但是内核基本稳定了。并且在上面做了asocket封装，编写网络程序非常方便。</li>
@@ -120,9 +132,9 @@
 </div>
 </div>
 
-<div id="outline-container-orgheadline3" class="outline-2">
-<h2 id="orgheadline3"><span class="section-number-2">3</span> Storage System</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-orgheadline4" class="outline-2">
+<h2 id="orgheadline4"><span class="section-number-2">4</span> Storage System</h2>
+<div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li><a href="storage-system-reading.html">Storage System Reading</a> 存储系统方面的一些文章
 <ul class="org-ul">
@@ -150,60 +162,6 @@
 <li><a href="memcached.html">memcached</a> an in-memory key-value store for small chunks of arbitrary data (strings, objects) 可以用来搭建分布式缓存服务，没有持久化存储。</li>
 <li><a href="rocksdb.html">rocksdb</a> A persistent key-value store for fast storage environments. 基于 <a href="leveldb.html">leveldb</a> 构建</li>
 <li><a href="rcfile.html">rcfile</a> / <a href="orcfile.html">orcfile</a> / <a href="parquet.html">parquet</a> 几种列式存储(columnar storage)实现</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-orgheadline4" class="outline-2">
-<h2 id="orgheadline4"><span class="section-number-2">4</span> Algorithm / ML / Compression</h2>
-<div class="outline-text-2" id="text-4">
-<p>
-<code>Algorithm</code>
-</p>
-<ul class="org-ul">
-<li><a href="general-algorithm.html">General Algorithm</a> 一些通用算法</li>
-<li><a href="./cracking-the-coding-interview.html">Cracking The Coding Interview</a> 据说算法分为三种：面试算法，ACM算法，算法=D</li>
-<li><a href="./do-you-think-you-have-gambling-problem.html">Do You Think You Have a Gambling Problem?</a> 赌博其实是概率问题</li>
-<li><a href="./probabilistic-data-structures-for-web-analytics-and-data-mining.html">Probabilistic Data Structures for Web Analytics and Data Mining</a> 用于Web分析和数据挖掘的概率化数据结构</li>
-<li><a href="computational-advertising.html">Computational Advertising</a> 计算广告</li>
-<li><a href="./bitcoin.html">Bitcoin: A Peer-to-Peer Electronic Cash System</a> 比特币论文</li>
-<li><a href="https://github.com/dirtysalt/tomb/tree/master/leetcode">My leetcode's code</a></li>
-</ul>
-
-<hr  />
-<p>
-<code>ML</code>
-</p>
-<ul class="org-ul">
-<li><a href="ml-reading.html">Machine Learning Reading</a> 机器学习方面的一些文章
-<ul class="org-ul">
-<li><a href="./ml-the-hard-way.html">Machine Learning the Hard Way</a> 哥们用ml来赌马，虽然最后赚钱了，但是结果却特别悲惨:)</li>
-<li><a href="./deconstructing-recommender-systems.html">Deconstructing Recommender Systems</a> 关于推荐系统的介绍性文章</li>
-</ul></li>
-<li><a href="./sklearn.html">sklearn</a> python scikit learn. 机器学习包.</li>
-<li><a href="caffe.html">caffe</a> C++实现的深度学习框架，有python和matlab的扩展接口</li>
-<li><a href="nolearn.html">nolearn</a> scikit-learn compatibile wrapper for neural nets. 底层可以使用不同的NN实现比如 <a href="./caffe.html">caffe</a>, <a href="https://github.com/Lasagne/Lasagne">lasagne</a>.</li>
-<li><a href="./beauty-of-math.html">数学之美</a> wujun</li>
-<li><a href="./ml-foundations.html">机器学习基石 on Coursera</a></li>
-<li><a href="./ml-techniques.html">机器学习技法 on Coursera</a></li>
-<li><a href="./neuralnets.html">Neural Networks for Machine Learning on Coursera</a></li>
-<li><a href="./mmds.html">Mining Massive Datasets on Coursera</a></li>
-<li><a href="http://www.autonlab.org/tutorials/list.html">Statistical Data Mining Tutorials</a> by <a href="http://www.cs.cmu.edu/~awm/">Andrew W. Moore</a></li>
-<li>Coursera: Machine Learning by Andrew Ng. <a href="ml-class.html">笔记和一些习题代码</a> (仅供学习) 以及 <a href="images/coursera-ml-2014.pdf">证书</a></li>
-<li><a href="https://github.com/dirtysalt/tomb/tree/master/kaggle">My kaggle's code</a></li>
-</ul>
-
-<hr  />
-<p>
-<code>Compression</code>
-</p>
-<ul class="org-ul">
-<li><a href="snappy.html">snappy</a> Google的开源压缩解压库。在满足一定压缩比率的条件下着重提升压缩和解压速度。</li>
-<li><a href="lzf.html">lzf</a> <a href="redis.html">redis</a> 使用的开源压缩解压库。轻量(两个文件)可以很容易地独立纳入项目。</li>
-<li><a href="lzma.html">lzma</a> Lempel-Ziv-Markov chain-Algorithm ，压缩速度相对较慢但是压缩比超高。</li>
-<li>zopfli <a href="https://github.com/google/zopfli/">https://github.com/google/zopfli/</a></li>
-<li>brotli <a href="https://github.com/google/brotli/">https://github.com/google/brotli/</a></li>
-<li>zstd <a href="https://github.com/facebook/zstd">https://github.com/facebook/zstd</a></li>
 </ul>
 </div>
 </div>
@@ -367,8 +325,22 @@
 </div>
 
 <div id="outline-container-orgheadline6" class="outline-2">
-<h2 id="orgheadline6"><span class="section-number-2">6</span> Programming Language</h2>
+<h2 id="orgheadline6"><span class="section-number-2">6</span> Algorithm</h2>
 <div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li><a href="general-algorithm.html">General Algorithm</a> 一些通用算法</li>
+<li><a href="./cracking-the-coding-interview.html">Cracking The Coding Interview</a> 据说算法分为三种：面试算法，ACM算法，算法=D</li>
+<li><a href="./do-you-think-you-have-gambling-problem.html">Do You Think You Have a Gambling Problem?</a> 赌博其实是概率问题</li>
+<li><a href="./probabilistic-data-structures-for-web-analytics-and-data-mining.html">Probabilistic Data Structures for Web Analytics and Data Mining</a> 用于Web分析和数据挖掘的概率化数据结构</li>
+<li><a href="computational-advertising.html">Computational Advertising</a> 计算广告</li>
+<li><a href="./bitcoin.html">Bitcoin: A Peer-to-Peer Electronic Cash System</a> 比特币论文</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline7" class="outline-2">
+<h2 id="orgheadline7"><span class="section-number-2">7</span> Programming Language</h2>
+<div class="outline-text-2" id="text-7">
 <ul class="org-ul">
 <li><a href="thoughts-on-prog-lang.html">Thoughts on Prog Lang</a></li>
 <li><a href="build-system.html">build-system</a> 在实现Baidu in-house的构建工具 <a href="http://wenku.baidu.com/view/19f3d535284ac850ad0242cc.html">Comake2</a> 之前做的构建系统调研总结.</li>
@@ -406,9 +378,9 @@
 </div>
 </div>
 
-<div id="outline-container-orgheadline7" class="outline-2">
-<h2 id="orgheadline7"><span class="section-number-2">7</span> Software Design</h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-orgheadline8" class="outline-2">
+<h2 id="orgheadline8"><span class="section-number-2">8</span> Software Design</h2>
+<div class="outline-text-2" id="text-8">
 <p>
 <b>articles</b>
 </p>
@@ -546,11 +518,47 @@
 </div>
 </div>
 
-<div id="outline-container-orgheadline8" class="outline-2">
-<h2 id="orgheadline8"><span class="section-number-2">8</span> Misc Books</h2>
-<div class="outline-text-2" id="text-8">
+<div id="outline-container-orgheadline9" class="outline-2">
+<h2 id="orgheadline9"><span class="section-number-2">9</span> Machine Learning</h2>
+<div class="outline-text-2" id="text-9">
 <ul class="org-ul">
-<li><a href="./links.html">Great links</a></li>
+<li><a href="ml-reading.html">Machine Learning Reading</a> 机器学习方面的一些文章
+<ul class="org-ul">
+<li><a href="./ml-the-hard-way.html">Machine Learning the Hard Way</a> 哥们用ml来赌马，虽然最后赚钱了，但是结果却特别悲惨:)</li>
+<li><a href="./deconstructing-recommender-systems.html">Deconstructing Recommender Systems</a> 关于推荐系统的介绍性文章</li>
+</ul></li>
+<li><a href="./sklearn.html">sklearn</a> python scikit learn. 机器学习包.</li>
+<li><a href="caffe.html">caffe</a> C++实现的深度学习框架，有python和matlab的扩展接口</li>
+<li><a href="nolearn.html">nolearn</a> scikit-learn compatibile wrapper for neural nets. 底层可以使用不同的NN实现比如 <a href="./caffe.html">caffe</a>, <a href="https://github.com/Lasagne/Lasagne">lasagne</a>.</li>
+<li><a href="./beauty-of-math.html">数学之美</a> wujun</li>
+<li><a href="./ml-foundations.html">机器学习基石 on Coursera</a></li>
+<li><a href="./ml-techniques.html">机器学习技法 on Coursera</a></li>
+<li><a href="./neuralnets.html">Neural Networks for Machine Learning on Coursera</a></li>
+<li><a href="./mmds.html">Mining Massive Datasets on Coursera</a></li>
+<li><a href="http://www.autonlab.org/tutorials/list.html">Statistical Data Mining Tutorials</a> by <a href="http://www.cs.cmu.edu/~awm/">Andrew W. Moore</a></li>
+<li>Coursera: Machine Learning by Andrew Ng. <a href="ml-class.html">笔记和一些习题代码</a> (仅供学习) 以及 <a href="images/coursera-ml-2014.pdf">证书</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline10" class="outline-2">
+<h2 id="orgheadline10"><span class="section-number-2">10</span> Compression</h2>
+<div class="outline-text-2" id="text-10">
+<ul class="org-ul">
+<li><a href="snappy.html">snappy</a> Google的开源压缩解压库。在满足一定压缩比率的条件下着重提升压缩和解压速度。</li>
+<li><a href="lzf.html">lzf</a> <a href="redis.html">redis</a> 使用的开源压缩解压库。轻量(两个文件)可以很容易地独立纳入项目。</li>
+<li><a href="lzma.html">lzma</a> Lempel-Ziv-Markov chain-Algorithm ，压缩速度相对较慢但是压缩比超高。</li>
+<li>zopfli <a href="https://github.com/google/zopfli/">https://github.com/google/zopfli/</a></li>
+<li>brotli <a href="https://github.com/google/brotli/">https://github.com/google/brotli/</a></li>
+<li>zstd <a href="https://github.com/facebook/zstd">https://github.com/facebook/zstd</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline11" class="outline-2">
+<h2 id="orgheadline11"><span class="section-number-2">11</span> Misc Books</h2>
+<div class="outline-text-2" id="text-11">
+<ul class="org-ul">
 <li><a href="./note/steve-jobs.html">史蒂夫乔布斯传(Steve Jobs)</a></li>
 <li><a href="./note/the-cathedral-and-the-bazaar.html">大教堂与市集(The Cathedral and the Bazaar)</a> by Eric Raymond</li>
 <li><a href="./note/hackers-and-painters.html">黑客与画家(Hackers and Painters)</a> by Paul Graham</li>
