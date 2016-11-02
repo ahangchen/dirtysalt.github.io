@@ -3,7 +3,6 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2016-11-02 三 20:14 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="viewport" content="width=device-width, initial-scale=1" />
 <title>如何做cross validation</title>
@@ -35,5 +34,5 @@ scikit-learn中有一节介绍cross validation的，里面说了怎么演化到c
 通过CV我们可以选择出比较模型(参数). 如果我们希望对多个模型来做比较(因为不同模型在选择阶段metrics和evaluation方式不同)的话，我们可以再进行一轮CV，但是使用不同参数。比如上一阶段选参数使用cv=10, random_state = 0, 那么比较这轮的话可以使用cv=10, random_state = 1.
 </p>
 </div>
-</body>
+<!-- DISQUS BEGIN --><div id="disqus_thread"></div><script type="text/javascript">/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * *//* required: replace example with your forum shortname  */var disqus_shortname = 'dirlt';var disqus_identifier = 'blogs/how-to-do-cross-validation.html';var disqus_title = 'blogs/how-to-do-cross-validation.html';var disqus_url = 'http://dirtysalt.info/blogs/how-to-do-cross-validation.html';/* * * DON'T EDIT BELOW THIS LINE * * */(function() {var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);})();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><!-- DISQUS END --></body>
 </html>

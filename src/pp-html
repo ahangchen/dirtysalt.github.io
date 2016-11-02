@@ -47,10 +47,10 @@ r2 = re.compile(r'^<p class="date">Date: ')
 r3 = re.compile(r'^<a href="http://validator.w3.org/check')
 r4 = re.compile(r'^<!-- \d{4}-\d{2}\-\d{2} ')
 
-for f in glob.glob('./*.html')+glob.glob('./blogs/*.html'):
+for f in glob.glob('../*.html')+glob.glob('../blogs/*.html'):
     if f.find('resume') != -1: continue # don't process my resume.
     xs = open(f,'r').readlines()
-    id = f[len('./html/'):]
+    id = f[len('../'):]
     ds=[]
     for x in xs:
         x = x[:-1] # strip trailing \n
