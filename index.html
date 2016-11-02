@@ -70,7 +70,7 @@
 </ul></li>
 <li><a href="sysperf.html">system-performance</a> 系统性能相关
 <ul class="org-ul">
-<li><a href="perf.html">perf</a> / <a href="oprofile.html">oprofile</a> (<a href="./oprofile-obsolete.html">obsolete version</a>) 系统级别profiler.</li>
+<li><a href="perf.html">perf</a> / <a href="oprofile.html">oprofile</a> (<a href="oprofile-obsolete.html">old version</a>) 系统级别profiler.</li>
 <li><a href="systemtap.html">systemtap</a> 通过将探测(probe)语句编译成为内核驱动来观察系统运行情况.</li>
 <li><a href="gperftools.html">gperftools</a> Google的应用级别性能分析工具，包含 <a href="tcmalloc.html">tcmalloc</a>.</li>
 <li><a href="./optimizing-software-in-cpp.html">Optimizing software in C++</a></li>
@@ -141,7 +141,7 @@
 <li><a href="./the-skinny-on-raid.html">The skinny on RAID</a> 一篇关于RAID的介绍性文章</li>
 </ul></li>
 <li>DBMS (database management system) <a href="./dbms-intro.html">Intro</a> &amp; <a href="./dbms-impl.html">Impl</a></li>
-<li><a href="gizzard.html">gizzard</a> a library for creating distributed datastores 可以认为是数据库中间层，完成partition/replication，也做fault-tolerant migration. (NOTE: obsolete. don't use it.)</li>
+<li><a href="gizzard.html">gizzard</a> a library for creating distributed datastores 可以认为是数据库中间层，完成partition/replication，也做fault-tolerant migration. <b>DEPRECATED, DONT USE IT</b></li>
 <li><a href="leveldb.html">leveldb</a> Google的开源kv存储系统。支持billion级别的数据量，适合于写少读多的情况。当时阅读的时候是从github上面clone下来的，可能还存相当多的bug.</li>
 <li><a href="mongodb.html">mongodb</a> 面向文档的分布式存储系统，但是却可以针对文档字段索引来加快查询。功能上比通常我们认为的NoSQL强但是弱于RDBMS.</li>
 <li><a href="redis.html">redis</a> 内存存储系统，支持丰富的数据类型以及相应的计算(支持持久化)。外围包装网络访问接口(并且提供了丰富的客户端),可以比较方便地在分布式系统内或者是环境下面使用.</li>
