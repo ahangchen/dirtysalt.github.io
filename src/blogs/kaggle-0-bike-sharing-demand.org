@@ -1,6 +1,6 @@
 #+title: kaggle-0 / Bike Sharing Demand
 
-[[https://github.com/dirtysalt/tomb/tree/master/kaggle/bike-sharing-demand.py][code on github]]
+[[https://github.com/dirtysalt/tomb/tree/master/kaggle/bike-sharing-demand.ipynb][code on github]]
 
 这是第一次做kaggle, 所以挑选了一道相对比较简单的题目，目的是为了积累经验。下面是总结出的几点：
 

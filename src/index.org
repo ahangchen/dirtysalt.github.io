@@ -1,8 +1,5 @@
 #+title: dirtysalt's homepage
 
-** On The Top
-[[file:jobs.org][Jobs]] - [[file:links.org][Links]]
-
 ** Operating System
 - [[file:computer-system-reading.org][Computer System Reading]] 单机系统方面的一些文章
   - [[file:./the-secret-to-10-million-concurrent-connections.org][The Secret To 10 Million Concurrent Connections -The Kernel Is The Problem, Not The Solution]]
@@ -92,6 +89,40 @@
 - [[file:memcached.org][memcached]] an in-memory key-value store for small chunks of arbitrary data (strings, objects) 可以用来搭建分布式缓存服务，没有持久化存储。
 - [[file:rocksdb.org][rocksdb]] A persistent key-value store for fast storage environments. 基于 [[file:leveldb.org][leveldb]] 构建
 - [[file:rcfile.org][rcfile]] / [[file:orcfile.org][orcfile]] / [[file:parquet.org][parquet]] 几种列式存储(columnar storage)实现
+
+** Algorithm / ML / Compression
+=Algorithm=
+- [[file:general-algorithm.org][General Algorithm]] 一些通用算法
+- [[file:./cracking-the-coding-interview.org][Cracking The Coding Interview]] 据说算法分为三种：面试算法，ACM算法，算法=D
+- [[file:./do-you-think-you-have-gambling-problem.org][Do You Think You Have a Gambling Problem?]] 赌博其实是概率问题
+- [[file:./probabilistic-data-structures-for-web-analytics-and-data-mining.org][Probabilistic Data Structures for Web Analytics and Data Mining]] 用于Web分析和数据挖掘的概率化数据结构
+- [[file:computational-advertising.org][Computational Advertising]] 计算广告
+- [[file:./bitcoin.org][Bitcoin: A Peer-to-Peer Electronic Cash System]] 比特币论文
+- [[https://github.com/dirtysalt/tomb/tree/master/leetcode][My leetcode's code]]
+
+=ML=
+- [[file:ml-reading.org][Machine Learning Reading]] 机器学习方面的一些文章
+  - [[file:./ml-the-hard-way.org][Machine Learning the Hard Way]] 哥们用ml来赌马，虽然最后赚钱了，但是结果却特别悲惨:)
+  - [[file:./deconstructing-recommender-systems.org][Deconstructing Recommender Systems]] 关于推荐系统的介绍性文章
+- [[file:./sklearn.org][sklearn]] python scikit learn. 机器学习包.
+- [[file:caffe.org][caffe]] C++实现的深度学习框架，有python和matlab的扩展接口
+- [[file:nolearn.org][nolearn]] scikit-learn compatibile wrapper for neural nets. 底层可以使用不同的NN实现比如 [[file:./caffe.org][caffe]], [[https://github.com/Lasagne/Lasagne][lasagne]].
+- [[file:./beauty-of-math.org][数学之美]] wujun
+- [[file:./ml-foundations.org][机器学习基石 on Coursera]]
+- [[file:./ml-techniques.org][机器学习技法 on Coursera]]
+- [[file:./neuralnets.org][Neural Networks for Machine Learning on Coursera]]
+- [[file:./mmds.org][Mining Massive Datasets on Coursera]]
+- [[http://www.autonlab.org/tutorials/list.html][Statistical Data Mining Tutorials]] by [[http://www.cs.cmu.edu/~awm/][Andrew W. Moore]]
+- Coursera: Machine Learning by Andrew Ng. [[file:ml-class.org][笔记和一些习题代码]] (仅供学习) 以及 [[file:images/coursera-ml-2014.pdf][证书]]
+- [[https://github.com/dirtysalt/tomb/tree/master/kaggle][My kaggle's code]]
+
+=Compression=
+- [[file:snappy.org][snappy]] Google的开源压缩解压库。在满足一定压缩比率的条件下着重提升压缩和解压速度。
+- [[file:lzf.org][lzf]] [[file:redis.org][redis]] 使用的开源压缩解压库。轻量(两个文件)可以很容易地独立纳入项目。
+- [[file:lzma.org][lzma]] Lempel-Ziv-Markov chain-Algorithm ，压缩速度相对较慢但是压缩比超高。
+- zopfli https://github.com/google/zopfli/
+- brotli https://github.com/google/brotli/
+- zstd https://github.com/facebook/zstd
 
 ** Distributed System
 *notes*
@@ -230,14 +261,6 @@
 - [[file:./spark-paper.org][Spark: Cluster Computing with Working Sets]] @ 2010
 - [[file:./spark-rdd-paper.org][Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing]] @ 2012
 - [[file:./spark-phd-paper.org][An Architecture for Fast and General Data Processing on Large Clusters]]
-
-** Algorithm
-- [[file:general-algorithm.org][General Algorithm]] 一些通用算法
-- [[file:./cracking-the-coding-interview.org][Cracking The Coding Interview]] 据说算法分为三种：面试算法，ACM算法，算法=D
-- [[file:./do-you-think-you-have-gambling-problem.org][Do You Think You Have a Gambling Problem?]] 赌博其实是概率问题
-- [[file:./probabilistic-data-structures-for-web-analytics-and-data-mining.org][Probabilistic Data Structures for Web Analytics and Data Mining]] 用于Web分析和数据挖掘的概率化数据结构
-- [[file:computational-advertising.org][Computational Advertising]] 计算广告
-- [[file:./bitcoin.org][Bitcoin: A Peer-to-Peer Electronic Cash System]] 比特币论文
 
 ** Programming Language
 - [[file:thoughts-on-prog-lang.org][Thoughts on Prog Lang]]
@@ -388,30 +411,8 @@
 - [[file:./blogs/getting-real.org][Getting Real]] by 37 Signals
 - [[file:./blogs/nine-algos-that-changed-the-future.org][改变未来的九大算法(Nine Algorithms that Changed the Future)]] by John. McCormick
 
-** Machine Learning
-- [[file:ml-reading.org][Machine Learning Reading]] 机器学习方面的一些文章
-  - [[file:./ml-the-hard-way.org][Machine Learning the Hard Way]] 哥们用ml来赌马，虽然最后赚钱了，但是结果却特别悲惨:)
-  - [[file:./deconstructing-recommender-systems.org][Deconstructing Recommender Systems]] 关于推荐系统的介绍性文章
-- [[file:./sklearn.org][sklearn]] python scikit learn. 机器学习包.
-- [[file:caffe.org][caffe]] C++实现的深度学习框架，有python和matlab的扩展接口
-- [[file:nolearn.org][nolearn]] scikit-learn compatibile wrapper for neural nets. 底层可以使用不同的NN实现比如 [[file:./caffe.org][caffe]], [[https://github.com/Lasagne/Lasagne][lasagne]].
-- [[file:./beauty-of-math.org][数学之美]] wujun
-- [[file:./ml-foundations.org][机器学习基石 on Coursera]]
-- [[file:./ml-techniques.org][机器学习技法 on Coursera]]
-- [[file:./neuralnets.org][Neural Networks for Machine Learning on Coursera]]
-- [[file:./mmds.org][Mining Massive Datasets on Coursera]]
-- [[http://www.autonlab.org/tutorials/list.html][Statistical Data Mining Tutorials]] by [[http://www.cs.cmu.edu/~awm/][Andrew W. Moore]]
-- Coursera: Machine Learning by Andrew Ng. [[file:ml-class.org][笔记和一些习题代码]] (仅供学习) 以及 [[file:images/coursera-ml-2014.pdf][证书]]
-
-** Compression
-- [[file:snappy.org][snappy]] Google的开源压缩解压库。在满足一定压缩比率的条件下着重提升压缩和解压速度。
-- [[file:lzf.org][lzf]] [[file:redis.org][redis]] 使用的开源压缩解压库。轻量(两个文件)可以很容易地独立纳入项目。
-- [[file:lzma.org][lzma]] Lempel-Ziv-Markov chain-Algorithm ，压缩速度相对较慢但是压缩比超高。
-- zopfli https://github.com/google/zopfli/
-- brotli https://github.com/google/brotli/
-- zstd https://github.com/facebook/zstd
-
 ** Misc Books
+- [[file:./links.org][Great links]]
 - [[file:./blogs/steve-jobs.org][史蒂夫乔布斯传(Steve Jobs)]]
 - [[file:./blogs/the-cathedral-and-the-bazaar.org][大教堂与市集(The Cathedral and the Bazaar)]] by Eric Raymond
 - [[file:./blogs/hackers-and-painters.org][黑客与画家(Hackers and Painters)]] by Paul Graham
