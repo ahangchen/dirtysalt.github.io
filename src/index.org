@@ -30,7 +30,7 @@
   - [[file:tcmalloc.org][tcmalloc]] Google的开源线程缓存内存分配器，解决多线程下面内存分配效率问题。
   - [[file:sanitizer.org][sanitizer]] Google的C++动态分析工具，可以检测内存泄漏，内存无效使用以及多线程数据竞争.
 - [[file:sysperf.org][system-performance]] 系统性能相关
-  - [[file:perf.org][perf]] / [[file:oprofile.org][oprofile]] ([[file:./oprofile-obsolete.org][obsolete version]]) 系统级别profiler.
+  - [[file:perf.org][perf]] / [[file:oprofile.org][oprofile]] ([[file:oprofile-obsolete.org][old version]]) 系统级别profiler.
   - [[file:systemtap.org][systemtap]] 通过将探测(probe)语句编译成为内核驱动来观察系统运行情况.
   - [[file:gperftools.org][gperftools]] Google的应用级别性能分析工具，包含 [[file:tcmalloc.org][tcmalloc]].
   - [[file:./optimizing-software-in-cpp.org][Optimizing software in C++]]
@@ -80,7 +80,7 @@
 - [[file:raid.org][RAID]] Redundant Array of Inexpensive Disk. 廉价磁盘冗余阵列
   - [[file:./the-skinny-on-raid.org][The skinny on RAID]] 一篇关于RAID的介绍性文章
 - DBMS (database management system) [[file:./dbms-intro.org][Intro]] & [[file:./dbms-impl.org][Impl]]
-- [[file:gizzard.org][gizzard]] a library for creating distributed datastores 可以认为是数据库中间层，完成partition/replication，也做fault-tolerant migration. (NOTE: obsolete. don't use it.)
+- [[file:gizzard.org][gizzard]] a library for creating distributed datastores 可以认为是数据库中间层，完成partition/replication，也做fault-tolerant migration. *DEPRECATED, DONT USE IT*
 - [[file:leveldb.org][leveldb]] Google的开源kv存储系统。支持billion级别的数据量，适合于写少读多的情况。当时阅读的时候是从github上面clone下来的，可能还存相当多的bug.
 - [[file:mongodb.org][mongodb]] 面向文档的分布式存储系统，但是却可以针对文档字段索引来加快查询。功能上比通常我们认为的NoSQL强但是弱于RDBMS.
 - [[file:redis.org][redis]] 内存存储系统，支持丰富的数据类型以及相应的计算(支持持久化)。外围包装网络访问接口(并且提供了丰富的客户端),可以比较方便地在分布式系统内或者是环境下面使用.
