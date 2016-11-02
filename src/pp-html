@@ -47,7 +47,7 @@ r2 = re.compile(r'^<p class="date">Date: ')
 r3 = re.compile(r'^<a href="http://validator.w3.org/check')
 r4 = re.compile(r'^<!-- \d{4}-\d{2}\-\d{2} ')
 
-for f in glob.glob('./*.html')+glob.glob('./note/*.html'):
+for f in glob.glob('./*.html')+glob.glob('./blogs/*.html'):
     if f.find('resume') != -1: continue # don't process my resume.
     xs = open(f,'r').readlines()
     id = f[len('./html/'):]
@@ -71,7 +71,7 @@ for f in glob.glob('./*.html')+glob.glob('./note/*.html'):
     open(f,'w').writelines(map(lambda x:x + '\n', ds))
 
 site = 'http://dirtysalt.info/'
-files = glob.glob('./src/*.org') + glob.glob('./src/note/*.org')
+files = glob.glob('./src/*.org') + glob.glob('./src/blogs/*.org')
 with open('sitemap.txt', 'w') as fh:
     fh.writelines(map(lambda x: site + x[len('./src/'):-3] + 'html\n', files))
 with open('sitemap.xml', 'w') as fh:

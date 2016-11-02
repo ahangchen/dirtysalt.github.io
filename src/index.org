@@ -44,7 +44,7 @@
 - [[file:concurrency.org][concurrency]] / [[file:coroutine.org][coroutine]] / [[file:lock.org][lock]] / [[file:continuation.org][continuation]]
   - [[file:./concurrency-hazards.org][Concurrency Hazards: Solving 11 Likely Problems In Your Multithreaded Code]]
   - [[file:./images/single-multi-thread-event-driven.jpg][One picture explain Single-Thread, Multiple-Thread, Event-Driven]]
-- [[file:ubuntu.org][ubuntu]] 如何更好地使用Ubuntu. [[file:note/struggle-with-ubuntu.org][之前有过痛苦的经历]] . 主要记录自己使用出现的问题.
+- [[file:ubuntu.org][ubuntu]] 如何更好地使用Ubuntu. [[file:./blogs/struggle-with-ubuntu.org][之前有过痛苦的经历]] . 主要记录自己使用出现的问题.
 - [[file:mac.org][macosx]] 如何更好地使用Mac. 以前使用Windows，后来转向Ubuntu，再后来买了个MBA.
 - [[file:docker.org][docker]] 基于lxc(linux container)的分发应用工具和平台.
 - [[file:vagrant.org][vagrant]] 用来构件虚拟开发环境的工具，底层可以使用多种虚拟化技术(现在支持相对比较好的是VirtualBox)
@@ -186,8 +186,8 @@
 - [[file:./mapreduce-patterns-algos-and-use-cases.org][MapReduce Patterns, Algorithms, and Use Cases]] @2012
 - [[file:./cloudera-impala-real-time-queries-in-apache-hadoop-for-real.org][Cloudera Impala: Real-Time Queries in Apache Hadoop, For Real]] @2012
 - [[file:streambase.org][A Glance on StreamBase]] 之前调研过的商用流式处理系统
-- 201604 [[file:./note/data-infra-at-airbnb.org][Data Infrastructure at Airbnb]]
-- 201606 [[file:./note/anaconda-high-perf-solution.org][Anacoda High Performance Solution]]
+- 201604 [[file:./blogs/data-infra-at-airbnb.org][Data Infrastructure at Airbnb]]
+- 201606 [[file:./blogs/anaconda-high-perf-solution.org][Anacoda High Performance Solution]]
 - [[file:./thoughts-on-systems-for-large-datasets.org][Thoughts on Systems for Large Datasets: Problems and Opportunities]] @ 2014 Jeff Dean
 - [[file:why-google-stores-billions-of-lines-of-code-in-a-single-repository.org][Why Google Stores Billions of Lines of Code in a Single Repository]] @ 2016
 
@@ -279,7 +279,7 @@
 - [[file:./systems-software-research-is-irrelevant.org][Systems Software Research is Irrelevant]]
 - [[file:./applied-philosophy-aka-hacking.org][Applied Philosophy, a.k.a "Hacking"]]
 - [[file:linux-kernel-management-style.org][Linux Kernel Management Style]]
-- [[file:./note/how-did-you-learn-so-much-stuff.org][How did you learn so much stuff about Oracle?]]
+- [[file:./blogs/how-did-you-learn-so-much-stuff.org][How did you learn so much stuff about Oracle?]]
 - [[file:./a-conversation-with-werner-vogels.org][A Conversation with Werner Vogels]]
 - [[file:./an-interview-with-edw.org][An Interview With Edsger W. Dijkstra]]
 - [[file:./what-are-the-best-kept-secrets-of-great-programmers.org][What are the best-kept secrets of great programmers?]]
@@ -307,56 +307,56 @@
 - [[file:./mean-people-fail.org][Mean People Fail]] by Paul Graham.
 
 *[[file:./blog.org][blogs]]*
-- 201710 [[file:./note/taking-php-seriously.org][Taking PHP Seriously]]
-- 201710 [[file:./note/becoming-cto.org][Becoming CTO]]
-- 201710 [[file:note/vinod-khosla-talk.org][Vinod Khosla: Failure does not matter. Success matters.]]
-- 201710 [[file:./note/silicon-valley-etiquette.org][Silicon Valley Etiquette]] 硅谷礼仪
-- 201709 [[file:./note/a-little-architecture.org][A Little Architecture]]
-- 201709 [[file:note/laws-of-performant-software.org][Laws of Performant Software]]
-- 201608 [[file:./note/the-future-of-programming.org][The Future of Programming]] by Bret Victor
-- 201608 [[file:./note/what-makes-a-great-software-engineer.org][What Makes A Great Software Engineer?]]
-- 201606 [[file:./note/top-10-things-that-makes-you-a-good-programmer.org][Top 10 Things that Makes You a Good Programmer]]
-- 201606 [[file:./note/dont-know-what-to-program.org]["I know how to program, but I don't know what to program"]]
-- 201606 [[file:./note/how-to-pick-your-battles-on-a-software-team.org][How to Pick Your Battles on a Software Team]]
-- 201606 [[file:./note/why-mit-stopped-teaching-SICP.org][为什么MIT停止教授SICP]]
-- 201606 [[file:./note/on-facebook-newsfeed.org][Facebook NewsFeed]]
-- 201606 [[file:./note/getting-things-done-when-you-are-only-a-grunt.org][Getting Things Done When You're Only a Grunt]] by Joel Spolsky
-- 201606 [[file:./note/10-lessons-from-10-years-of-aws.org][10 Lessons from 10 Years of Amazon Web Services]]
-- 201606 [[file:./note/how-gfw-discovers-hidden-circumvention-servers.org][32c3-7196-en-How_the_Great_Firewall_discovers_hidden_circumvention_servers]] GFW如何发现代理服务器
-- 201606 [[file:./note/anaconda-high-perf-solution.org][Anacoda High Performance Solution]]
-- 201605 [[file:./note/work-efficiently-in-facebook.org][Facebook公司内部PPT分享:如何高效工作]]
-- 201605 [[file:./note/on-career-and-management.org][关于工作年限和管理的问题]] by nullgate
-- 201604 [[file:./note/starters-and-maintainers.org][Starters and Maintainers]]
-- 201604 [[file:./note/automate-to-save-mental-energy-not-time.org][Automate to save mental energy, not time]]
-- 201604 [[file:./note/surviving-meetings-while-remote.org][Surviving meetings while remote]]
-- 201604 [[file:./note/programmers-are-distraction-for-your-startup.org][Programmers are distraction for your startup]]
-- 201604 [[file:./note/finding-great-developers.org][Finding Great Developers]]
-- 201604 [[file:./note/why-cant-programmers-program.org][Why Can't Programmers.. Program?]]
-- 201604 [[file:note/dont-call-yourself-a-programmer.org][Don't Call Yourself A Programmer]]
-- 201604 [[file:./note/atlassian-user-onboarding-magic.org][Atlassian $5.5b user onboarding magic]]
-- 201512 [[file:./note/how-to-launch-a-mac-app-and-become-1-top-paid-app-globally.org][How To Launch a Mac App and Become #1 Top Paid App Globally]]
-- 201512 [[file:./note/what-would-it-take-to-prove-me-wrong.org][What would it take to prove me wrong?]]
-- 201512 [[file:./note/a-great-developer-can-come-from-anywhere.org][A great developer can come from anywhere]]
-- 201512 [[file:./note/employee-equity.org][Employee Equity]]
-- 201512 [[file:./note/before-you-code-write.org][Before you code, write.]]
-- 201512 [[file:./note/remove-the-stress-pick-a-deadline.org][Remove the stress, pick a deadline]]
-- 201512 [[file:./note/the-secret-to-career-success.org][The Secret to Career Success]]
-- 201511 [[file:note/why-i-stopped-paying-attention-to-industry-news.org][Why I stopped paying attention to industry news]]
-- 201510 [[file:./note/learn-stop-using-shiny-new-things-and-love-mysql.org][Learn to stop using shiny new things and love MySQL]]
-- 201510 [[file:./note/climbing-the-wrong-hill.org][Climbing The Wrong Hill]]
-- 201510 [[file:./note/lessons-learned-writing-highly-available-code.org][Lessons learned writing highly available code]]
-- 201510 [[file:note/dont-base-your-business-on-a-paid-app.org][Don't base your business on a paid app]]
-- 201510 [[file:./note/some-advice-from-jeff-bezos.org][Some advice from Jeff Bezos]]
-- 201510 [[file:./note/ten-rules-for-open-source-success.org][Ten Rules for Open Source Success]]
-- 201510 [[file:./note/competitors-are-not-the-enemy.org][Competitors Are Not The Enemy]]
-- 201510 [[file:./note/making-money-along-the-way.org][Making money along the way]]
-- 201510 [[file:./note/chasing-the-shiny-and-new.org][chasing the shiny and new (追逐时髦的技术)]]
-- 201510 [[file:./note/why-cd-just-keeps-on-giving.org][Why Continuous Deployment just keeps on giving]]
-- 201510 [[file:./note/how-to-get-a-job-like-mine-aaron-swartz.org][Aaron Swartz: How to Get a Job Like Mine]]
-- 201510 [[file:./note/a-decade-at-google.org][A Decade at Google]]
-- 201509 [[file:./note/a-love-for-legacy.org][A Love for Legacy]]
-- 201509 [[file:note/what-happens-to-older-developers.org][What Happens to Older Developers?]]
-- 201509 [[file:./note/tips-for-work-life-balance.org][Tips for work-life balance]]
+- 201710 [[file:./blogs/taking-php-seriously.org][Taking PHP Seriously]]
+- 201710 [[file:./blogs/becoming-cto.org][Becoming CTO]]
+- 201710 [[file:./blogs/vinod-khosla-talk.org][Vinod Khosla: Failure does not matter. Success matters.]]
+- 201710 [[file:./blogs/silicon-valley-etiquette.org][Silicon Valley Etiquette]] 硅谷礼仪
+- 201709 [[file:./blogs/a-little-architecture.org][A Little Architecture]]
+- 201709 [[file:./blogs/laws-of-performant-software.org][Laws of Performant Software]]
+- 201608 [[file:./blogs/the-future-of-programming.org][The Future of Programming]] by Bret Victor
+- 201608 [[file:./blogs/what-makes-a-great-software-engineer.org][What Makes A Great Software Engineer?]]
+- 201606 [[file:./blogs/top-10-things-that-makes-you-a-good-programmer.org][Top 10 Things that Makes You a Good Programmer]]
+- 201606 [[file:./blogs/dont-know-what-to-program.org]["I know how to program, but I don't know what to program"]]
+- 201606 [[file:./blogs/how-to-pick-your-battles-on-a-software-team.org][How to Pick Your Battles on a Software Team]]
+- 201606 [[file:./blogs/why-mit-stopped-teaching-SICP.org][为什么MIT停止教授SICP]]
+- 201606 [[file:./blogs/on-facebook-newsfeed.org][Facebook NewsFeed]]
+- 201606 [[file:./blogs/getting-things-done-when-you-are-only-a-grunt.org][Getting Things Done When You're Only a Grunt]] by Joel Spolsky
+- 201606 [[file:./blogs/10-lessons-from-10-years-of-aws.org][10 Lessons from 10 Years of Amazon Web Services]]
+- 201606 [[file:./blogs/how-gfw-discovers-hidden-circumvention-servers.org][32c3-7196-en-How_the_Great_Firewall_discovers_hidden_circumvention_servers]] GFW如何发现代理服务器
+- 201606 [[file:./blogs/anaconda-high-perf-solution.org][Anacoda High Performance Solution]]
+- 201605 [[file:./blogs/work-efficiently-in-facebook.org][Facebook公司内部PPT分享:如何高效工作]]
+- 201605 [[file:./blogs/on-career-and-management.org][关于工作年限和管理的问题]] by nullgate
+- 201604 [[file:./blogs/starters-and-maintainers.org][Starters and Maintainers]]
+- 201604 [[file:./blogs/automate-to-save-mental-energy-not-time.org][Automate to save mental energy, not time]]
+- 201604 [[file:./blogs/surviving-meetings-while-remote.org][Surviving meetings while remote]]
+- 201604 [[file:./blogs/programmers-are-distraction-for-your-startup.org][Programmers are distraction for your startup]]
+- 201604 [[file:./blogs/finding-great-developers.org][Finding Great Developers]]
+- 201604 [[file:./blogs/why-cant-programmers-program.org][Why Can't Programmers.. Program?]]
+- 201604 [[file:./blogs/dont-call-yourself-a-programmer.org][Don't Call Yourself A Programmer]]
+- 201604 [[file:./blogs/atlassian-user-onboarding-magic.org][Atlassian $5.5b user onboarding magic]]
+- 201512 [[file:./blogs/how-to-launch-a-mac-app-and-become-1-top-paid-app-globally.org][How To Launch a Mac App and Become #1 Top Paid App Globally]]
+- 201512 [[file:./blogs/what-would-it-take-to-prove-me-wrong.org][What would it take to prove me wrong?]]
+- 201512 [[file:./blogs/a-great-developer-can-come-from-anywhere.org][A great developer can come from anywhere]]
+- 201512 [[file:./blogs/employee-equity.org][Employee Equity]]
+- 201512 [[file:./blogs/before-you-code-write.org][Before you code, write.]]
+- 201512 [[file:./blogs/remove-the-stress-pick-a-deadline.org][Remove the stress, pick a deadline]]
+- 201512 [[file:./blogs/the-secret-to-career-success.org][The Secret to Career Success]]
+- 201511 [[file:./blogs/why-i-stopped-paying-attention-to-industry-news.org][Why I stopped paying attention to industry news]]
+- 201510 [[file:./blogs/learn-stop-using-shiny-new-things-and-love-mysql.org][Learn to stop using shiny new things and love MySQL]]
+- 201510 [[file:./blogs/climbing-the-wrong-hill.org][Climbing The Wrong Hill]]
+- 201510 [[file:./blogs/lessons-learned-writing-highly-available-code.org][Lessons learned writing highly available code]]
+- 201510 [[file:./blogs/dont-base-your-business-on-a-paid-app.org][Don't base your business on a paid app]]
+- 201510 [[file:./blogs/some-advice-from-jeff-bezos.org][Some advice from Jeff Bezos]]
+- 201510 [[file:./blogs/ten-rules-for-open-source-success.org][Ten Rules for Open Source Success]]
+- 201510 [[file:./blogs/competitors-are-not-the-enemy.org][Competitors Are Not The Enemy]]
+- 201510 [[file:./blogs/making-money-along-the-way.org][Making money along the way]]
+- 201510 [[file:./blogs/chasing-the-shiny-and-new.org][chasing the shiny and new (追逐时髦的技术)]]
+- 201510 [[file:./blogs/why-cd-just-keeps-on-giving.org][Why Continuous Deployment just keeps on giving]]
+- 201510 [[file:./blogs/how-to-get-a-job-like-mine-aaron-swartz.org][Aaron Swartz: How to Get a Job Like Mine]]
+- 201510 [[file:./blogs/a-decade-at-google.org][A Decade at Google]]
+- 201509 [[file:./blogs/a-love-for-legacy.org][A Love for Legacy]]
+- 201509 [[file:./blogs/what-happens-to-older-developers.org][What Happens to Older Developers?]]
+- 201509 [[file:./blogs/tips-for-work-life-balance.org][Tips for work-life balance]]
 
 *books*
 - [[file:design-reading.org][Design Reading]] 软件设计方面的一些文章
@@ -367,26 +367,26 @@
 - [[file:./aosa.org][The Architecture of Open Source Applications]]
 - [[http://berb.github.io/diploma-thesis/community/index.html][Concurrent Programming for Scalable Web Architectures]]
 - [[http://producingoss.com/][Producing Open Source Software]]
-- [[file:./note/the-cathedral-and-the-bazaar.org][大教堂与市集(The Cathedral and the Bazaar)]] by Eric Raymond
-- [[file:./note/hackers-and-painters.org][黑客与画家(Hackers and Painters)]] by Paul Graham
-- [[file:./note/writing-clean-code.org][编程精粹-Microsoft编写优质无错代码的秘诀(Writing Clean Code)]]
-- [[file:./note/the-art-of-unix-programming.org][Unix程序设计艺术(The Art of Unix Programming)]] by Eric Raymond
-- [[file:./note/the-mythical-man-month.org][人月神话(The Mythical Man-Month)]] by Fred Brooks
-- [[file:./note/the-pragmatic-programmer.org][程序员修炼之道(The Pragmatic Programmer)]] by Andrew Hunt
-- [[file:./note/dreaming-in-code.org][梦断代码(Dreaming in Code)]]
-- [[file:./note/refactoring-improving-the-design-of-existing-code.org][重构-改善既有代码的设计(Refactoring: Improving the Design of Existing Code)]]
-- [[file:./note/code-quality-the-open-source-perspective.org][高质量程序设计艺术(Code Quality The Open Source Perspective)]]
-- [[file:./note/virtual-machine-design-and-implementation-in-c-cpp.org][虚拟机设计与实现(Virtual Machine Design and Implementation in C/C++)]]
-- [[file:./note/structured-computer-organization.org][结构化计算机组成(Strcutured Computer Organization)]] by A.S.T
-- [[file:./note/modern-operating-systems.org][现代操作系统(Modern Operating Systems)]] by A.S.T
-- [[file:./note/introduction-to-computing-systems.org][计算机系统概论(Introduction to Computing Systems)]] by Yale Patt
-- [[file:./note/distributed-operating-systems.org][分布式操作系统(Distributed Operating Systems)]] by A.S.T
-- [[file:note/on-top-of-tides.org][浪潮之巅(On Top of Tides)]] by 吴军
-- [[file:note/venture-captial.org][风险投资(Venture Captial)]] 摘自 <浪潮之巅>
-- [[file:note/rework.org][Rework]] by 37 Signals
-- [[file:note/pragmatic-thinking-and-learning.org][程序员的思维修炼(Pragmatic Thinking and Learning - Refactor Your Wetware)]]
-- [[file:./note/getting-real.org][Getting Real]] by 37 Signals
-- [[file:note/nine-algos-that-changed-the-future.org][改变未来的九大算法(Nine Algorithms that Changed the Future)]] by John. McCormick
+- [[file:./blogs/the-cathedral-and-the-bazaar.org][大教堂与市集(The Cathedral and the Bazaar)]] by Eric Raymond
+- [[file:./blogs/hackers-and-painters.org][黑客与画家(Hackers and Painters)]] by Paul Graham
+- [[file:./blogs/writing-clean-code.org][编程精粹-Microsoft编写优质无错代码的秘诀(Writing Clean Code)]]
+- [[file:./blogs/the-art-of-unix-programming.org][Unix程序设计艺术(The Art of Unix Programming)]] by Eric Raymond
+- [[file:./blogs/the-mythical-man-month.org][人月神话(The Mythical Man-Month)]] by Fred Brooks
+- [[file:./blogs/the-pragmatic-programmer.org][程序员修炼之道(The Pragmatic Programmer)]] by Andrew Hunt
+- [[file:./blogs/dreaming-in-code.org][梦断代码(Dreaming in Code)]]
+- [[file:./blogs/refactoring-improving-the-design-of-existing-code.org][重构-改善既有代码的设计(Refactoring: Improving the Design of Existing Code)]]
+- [[file:./blogs/code-quality-the-open-source-perspective.org][高质量程序设计艺术(Code Quality The Open Source Perspective)]]
+- [[file:./blogs/virtual-machine-design-and-implementation-in-c-cpp.org][虚拟机设计与实现(Virtual Machine Design and Implementation in C/C++)]]
+- [[file:./blogs/structured-computer-organization.org][结构化计算机组成(Strcutured Computer Organization)]] by A.S.T
+- [[file:./blogs/modern-operating-systems.org][现代操作系统(Modern Operating Systems)]] by A.S.T
+- [[file:./blogs/introduction-to-computing-systems.org][计算机系统概论(Introduction to Computing Systems)]] by Yale Patt
+- [[file:./blogs/distributed-operating-systems.org][分布式操作系统(Distributed Operating Systems)]] by A.S.T
+- [[file:./blogs/on-top-of-tides.org][浪潮之巅(On Top of Tides)]] by 吴军
+- [[file:./blogs/venture-captial.org][风险投资(Venture Captial)]] 摘自 <浪潮之巅>
+- [[file:./blogs/rework.org][Rework]] by 37 Signals
+- [[file:./blogs/pragmatic-thinking-and-learning.org][程序员的思维修炼(Pragmatic Thinking and Learning - Refactor Your Wetware)]]
+- [[file:./blogs/getting-real.org][Getting Real]] by 37 Signals
+- [[file:./blogs/nine-algos-that-changed-the-future.org][改变未来的九大算法(Nine Algorithms that Changed the Future)]] by John. McCormick
 
 ** Machine Learning
 - [[file:ml-reading.org][Machine Learning Reading]] 机器学习方面的一些文章
@@ -412,88 +412,88 @@
 - zstd https://github.com/facebook/zstd
 
 ** Misc Books
-- [[file:./note/steve-jobs.org][史蒂夫乔布斯传(Steve Jobs)]]
-- [[file:./note/the-cathedral-and-the-bazaar.org][大教堂与市集(The Cathedral and the Bazaar)]] by Eric Raymond
-- [[file:./note/hackers-and-painters.org][黑客与画家(Hackers and Painters)]] by Paul Graham
-- [[file:./note/writing-clean-code.org][编程精粹-Microsoft编写优质无错代码的秘诀(Writing Clean Code)]]
-- [[file:./note/the-art-of-unix-programming.org][Unix程序设计艺术(The Art of Unix Programming)]] by Eric Raymond
-- [[file:./note/the-mythical-man-month.org][人月神话(The Mythical Man-Month)]] by Fred Brooks
-- [[file:./note/the-pragmatic-programmer.org][程序员修炼之道(The Pragmatic Programmer)]] by Andrew Hunt
-- [[file:./note/dreaming-in-code.org][梦断代码(Dreaming in Code)]]
-- [[file:./note/refactoring-improving-the-design-of-existing-code.org][重构-改善既有代码的设计(Refactoring: Improving the Design of Existing Code)]]
-- [[file:./note/code-quality-the-open-source-perspective.org][高质量程序设计艺术(Code Quality The Open Source Perspective)]]
-- [[file:./note/virtual-machine-design-and-implementation-in-c-cpp.org][虚拟机设计与实现(Virtual Machine Design and Implementation in C/C++)]]
-- [[file:./note/structured-computer-organization.org][结构化计算机组成(Strcutured Computer Organization)]] by A.S.T
-- [[file:./note/modern-operating-systems.org][现代操作系统(Modern Operating Systems)]] by A.S.T
-- [[file:./note/introduction-to-computing-systems.org][计算机系统概论(Introduction to Computing Systems)]] by Yale Patt
-- [[file:./note/distributed-operating-systems.org][分布式操作系统(Distributed Operating Systems)]] by A.S.T
-- [[file:./note/how-to-solve-it-a-new-apsect-of-math-method.org][如何解题-数学思维新方法(How to Solve It: A New Aspect of Mathematical Method)]] by George Polya
-- [[file:./note/republic.org][理想国(Republic)]] by Plato
+- [[file:./blogs/steve-jobs.org][史蒂夫乔布斯传(Steve Jobs)]]
+- [[file:./blogs/the-cathedral-and-the-bazaar.org][大教堂与市集(The Cathedral and the Bazaar)]] by Eric Raymond
+- [[file:./blogs/hackers-and-painters.org][黑客与画家(Hackers and Painters)]] by Paul Graham
+- [[file:./blogs/writing-clean-code.org][编程精粹-Microsoft编写优质无错代码的秘诀(Writing Clean Code)]]
+- [[file:./blogs/the-art-of-unix-programming.org][Unix程序设计艺术(The Art of Unix Programming)]] by Eric Raymond
+- [[file:./blogs/the-mythical-man-month.org][人月神话(The Mythical Man-Month)]] by Fred Brooks
+- [[file:./blogs/the-pragmatic-programmer.org][程序员修炼之道(The Pragmatic Programmer)]] by Andrew Hunt
+- [[file:./blogs/dreaming-in-code.org][梦断代码(Dreaming in Code)]]
+- [[file:./blogs/refactoring-improving-the-design-of-existing-code.org][重构-改善既有代码的设计(Refactoring: Improving the Design of Existing Code)]]
+- [[file:./blogs/code-quality-the-open-source-perspective.org][高质量程序设计艺术(Code Quality The Open Source Perspective)]]
+- [[file:./blogs/virtual-machine-design-and-implementation-in-c-cpp.org][虚拟机设计与实现(Virtual Machine Design and Implementation in C/C++)]]
+- [[file:./blogs/structured-computer-organization.org][结构化计算机组成(Strcutured Computer Organization)]] by A.S.T
+- [[file:./blogs/modern-operating-systems.org][现代操作系统(Modern Operating Systems)]] by A.S.T
+- [[file:./blogs/introduction-to-computing-systems.org][计算机系统概论(Introduction to Computing Systems)]] by Yale Patt
+- [[file:./blogs/distributed-operating-systems.org][分布式操作系统(Distributed Operating Systems)]] by A.S.T
+- [[file:./blogs/how-to-solve-it-a-new-apsect-of-math-method.org][如何解题-数学思维新方法(How to Solve It: A New Aspect of Mathematical Method)]] by George Polya
+- [[file:./blogs/republic.org][理想国(Republic)]] by Plato
 - 影响力(Influence) by Kerry Patterson
 - 娱乐至死(Amusing Ourselves to Death) by Neil Postman
 - 狂热分子(True Believer) by Eric Hoffer
 - 乌合之众(The Crowd) by Gustave Le Bon
-- [[file:./note/people-all-know.org][全世界人民都知道]] by 李承鹏
-- [[file:./note/big-data.org][大数据时代：生活、工作与思维的大变革(Big Data:A Revolution That Will Transform How We Live, Work, and Think)]]
-- [[file:note/the-catcher-in-the-rye.org][麦田里的守望者(The Catcher in The Rye)]] by Jerome Salinger
-- [[file:note/jonathon-ive.org][乔纳森传(Jonathon Ive)]]
-- [[file:note/the-facebook-effect.org][Facebook效应(The Facebook Effect)]]
-- [[file:note/the-little-prince.org][小王子(The Little Prince)]] by Antoine de Saint-Exupéry
-- [[file:note/on-top-of-tides.org][浪潮之巅(On Top of Tides)]] by 吴军
-- [[file:note/the-economic-naturalist.org][牛奶可乐经济学(The Economic Naturalist)]]
-- [[file:note/venture-captial.org][风险投资(Venture Captial)]] 摘自 <浪潮之巅>
-- [[file:./note/baked-in-creating-products-and-business-that-market-themselves.org][自营销(Baked In: Creating Products and Businesses That Market Themselves)]]
-- [[file:note/dear-andreas.org][亲爱的安德烈]] by 龙应台
-- [[file:note/rework.org][Rework]] by 37 Signals
-- [[file:note/pragmatic-thinking-and-learning.org][程序员的思维修炼(Pragmatic Thinking and Learning - Refactor Your Wetware)]]
-- [[file:./note/getting-real.org][Getting Real]] by 37 Signals
-- [[file:note/think-like-an-artist.org][像艺术家一样思考-藏在名画里的创意思维(Think Like An Artist)]]
-- [[file:note/confessions-of-an-advertising-man.org][一个广告人的自白(Confessions of an Advertising Man)]]
-- [[file:note/remote.org][Remote]] by 37 Signals
-- [[file:note/inside-job.org][监守自盗(Inside Job)]]
-- [[file:note/god-father.org][教父(God Father)]] by Francis Coppola
-- [[file:note/seediq-bale.org][赛德克巴莱(Seediq Bale)]] by 魏德圣
-- [[file:./note/scent-of-a-woman.org][闻香识女人(Scent of a Woman)]]
-- [[file:note/pulp-fiction.org][低俗小说(Pulp Fiction)]] by Quentin Tarantino
-- [[file:./note/the-hurt-locker.org][拆弹部队(The Hurt Locker)]]
-- [[file:note/lincoln.org][林肯(Lincoln)(2012)]] by Steven Spielberg
-- [[file:note/the-prestige.org][致命魔术(The Prestige)]] by Chris Nolan
-- [[file:note/moneyball.org][点球成金(Moneyball)]]
-- [[file:./note/animal-farm.org][动物庄园(Animal Farm)]] by George Orwell
-- [[file:./note/stairway-to-heaven.org][Stairway to Heaven]] by Led Zeppelin
-- [[file:./note/dont-go-gentle-into-that-good-night.org][Do not go gentle into that good night]] by Dylan Thomas
-- [[file:./note/youtube-steve-chen-bio.org][YouTube创始人陈士骏自传]]
-- [[file:./note/1984.org][1984]] by George Orwell
-- [[file:note/civilizations-and-enlightenments.org][文明之光]] by wujun
-- [[file:./note/why-cn-people-anxious.org][中国人的焦虑从哪里来]] by 茅于轼
-- [[file:./note/wu-qing-yuan-bio.org][中的精神（吴清源自传）]]
-- [[file:note/star-wars.org][星球大战(Star Wars)]]
-- [[file:./note/baby-sleep-training.org][有关宝宝睡眠的那些事儿(睡眠训练实战操作经验)]]
-- [[file:note/antifragile.org][反脆弱: 从不确定性中获益(Antifragile: Things That Gain from Disorder)]] by Nassim Nicholas Taleb
-- [[file:note/money-doggy.org][小狗钱钱]] by Bodo Schafer
-- [[file:note/the-signal-and-the-noise.org][信号与噪声: 大数据时代预测的科学与艺术(The Signal and the Noise: Why Most Predictions Fail but Some Don't)]] by Nate Silver
-- [[file:./note/anti-destruction-in-china.org][李可乐抗拆记]] by 李承鹏
-- [[file:./note/dark-time.org][暗时间]] by 刘未鹏
-- [[file:note/wolf-totem.org][狼图腾]] by 姜戎
-- [[file:./note/sears-the-baby-book.org][西尔斯育儿经]] by 威廉·西尔斯;玛莎·西尔斯
-- [[file:note/platform-strategy.org][平台战略: 正在席卷全球的商业模式革命]] by 陈威如, 余卓轩
-- [[file:note/nine-algos-that-changed-the-future.org][改变未来的九大算法(Nine Algorithms that Changed the Future)]] by John. McCormick
-- [[file:note/the-men-who-built-america.org][谁建造了美国(The men who built America)]] by 网易公开课
-- [[file:./note/that-man-looks-like-a-dog.org][(ZZ)那个人好像一条狗]] 周星驰 <大圣娶亲>
-- [[file:note/three-body.org][三体(Three Body)]] by 刘慈欣
-- [[file:note/growth-hacker.org][增长黑客(Growth Hacker)]] by 范冰
-- [[file:./note/lean-in.org][向前一步(Lean In)]] by Sheryl Sandberg
-- [[file:note/the-hitchhikers-guide-to-the-galaxy.org][银河系漫游指南(The Hitchhiker's Guide to the Galaxy)]] by Douglas Adams
-- [[file:note/thinking-fast-and-slow.org][思考,快与慢(Thinking, Fast and Slow)]] by Daniel Kahneman
-- [[file:note/from-zero-to-one.org][从0到1(From Zero To One)]] by Peter Thiel
-- [[file:note/the-great-game.org][伟大的博弈: 华尔街金融帝国的崛起(The Great Game: The Emergence of Wall Street as a World Power)]] by John Gordon
-- [[file:./note/delivering-happiness.org][奉上幸福(Devliering Happiness)]] by 谢家华
-- [[file:./note/convict-conditioning.org][囚徒健身(Convict Conditioning)]] by Paul Wade
-- [[file:note/the-paypal-wars.org][支付战争(The PayPal Wars)]] by Eric Jackson
-- [[file:./note/how-google-works.org][谷歌是如何运营的(How Google Works)]] by Eric Schmidt
-- [[file:./note/reminiscences-of-stock-broker.org][股票作手回忆录(Reminiscences of stock broker)]] by Jesse Livermore
-- [[file:note/zhihu-daily-economy.org][知乎周刊-日常经济学]]
-- [[file:./note/the-shortest-history-of-europe.org][极简欧洲史]] by John Hirst
-- [[file:./note/majority-of-silent-people.org][沉默的大多数]] by 王小波
-- [[file:./note/mac-talk.org][MacTalk]] by 池建强
-- [[file:note/zhihu-hft-engineer.org][我是高频交易工程师：知乎董可人自选集]]
+- [[file:./blogs/people-all-know.org][全世界人民都知道]] by 李承鹏
+- [[file:./blogs/big-data.org][大数据时代：生活、工作与思维的大变革(Big Data:A Revolution That Will Transform How We Live, Work, and Think)]]
+- [[file:./blogs/the-catcher-in-the-rye.org][麦田里的守望者(The Catcher in The Rye)]] by Jerome Salinger
+- [[file:./blogs/jonathon-ive.org][乔纳森传(Jonathon Ive)]]
+- [[file:./blogs/the-facebook-effect.org][Facebook效应(The Facebook Effect)]]
+- [[file:./blogs/the-little-prince.org][小王子(The Little Prince)]] by Antoine de Saint-Exupéry
+- [[file:./blogs/on-top-of-tides.org][浪潮之巅(On Top of Tides)]] by 吴军
+- [[file:./blogs/the-economic-naturalist.org][牛奶可乐经济学(The Economic Naturalist)]]
+- [[file:./blogs/venture-captial.org][风险投资(Venture Captial)]] 摘自 <浪潮之巅>
+- [[file:./blogs/baked-in-creating-products-and-business-that-market-themselves.org][自营销(Baked In: Creating Products and Businesses That Market Themselves)]]
+- [[file:./blogs/dear-andreas.org][亲爱的安德烈]] by 龙应台
+- [[file:./blogs/rework.org][Rework]] by 37 Signals
+- [[file:./blogs/pragmatic-thinking-and-learning.org][程序员的思维修炼(Pragmatic Thinking and Learning - Refactor Your Wetware)]]
+- [[file:./blogs/getting-real.org][Getting Real]] by 37 Signals
+- [[file:./blogs/think-like-an-artist.org][像艺术家一样思考-藏在名画里的创意思维(Think Like An Artist)]]
+- [[file:./blogs/confessions-of-an-advertising-man.org][一个广告人的自白(Confessions of an Advertising Man)]]
+- [[file:./blogs/remote.org][Remote]] by 37 Signals
+- [[file:./blogs/inside-job.org][监守自盗(Inside Job)]]
+- [[file:./blogs/god-father.org][教父(God Father)]] by Francis Coppola
+- [[file:./blogs/seediq-bale.org][赛德克巴莱(Seediq Bale)]] by 魏德圣
+- [[file:./blogs/scent-of-a-woman.org][闻香识女人(Scent of a Woman)]]
+- [[file:./blogs/pulp-fiction.org][低俗小说(Pulp Fiction)]] by Quentin Tarantino
+- [[file:./blogs/the-hurt-locker.org][拆弹部队(The Hurt Locker)]]
+- [[file:./blogs/lincoln.org][林肯(Lincoln)(2012)]] by Steven Spielberg
+- [[file:./blogs/the-prestige.org][致命魔术(The Prestige)]] by Chris Nolan
+- [[file:./blogs/moneyball.org][点球成金(Moneyball)]]
+- [[file:./blogs/animal-farm.org][动物庄园(Animal Farm)]] by George Orwell
+- [[file:./blogs/stairway-to-heaven.org][Stairway to Heaven]] by Led Zeppelin
+- [[file:./blogs/dont-go-gentle-into-that-good-night.org][Do not go gentle into that good night]] by Dylan Thomas
+- [[file:./blogs/youtube-steve-chen-bio.org][YouTube创始人陈士骏自传]]
+- [[file:./blogs/1984.org][1984]] by George Orwell
+- [[file:./blogs/civilizations-and-enlightenments.org][文明之光]] by wujun
+- [[file:./blogs/why-cn-people-anxious.org][中国人的焦虑从哪里来]] by 茅于轼
+- [[file:./blogs/wu-qing-yuan-bio.org][中的精神（吴清源自传）]]
+- [[file:./blogs/star-wars.org][星球大战(Star Wars)]]
+- [[file:./blogs/baby-sleep-training.org][有关宝宝睡眠的那些事儿(睡眠训练实战操作经验)]]
+- [[file:./blogs/antifragile.org][反脆弱: 从不确定性中获益(Antifragile: Things That Gain from Disorder)]] by Nassim Nicholas Taleb
+- [[file:./blogs/money-doggy.org][小狗钱钱]] by Bodo Schafer
+- [[file:./blogs/the-signal-and-the-noise.org][信号与噪声: 大数据时代预测的科学与艺术(The Signal and the Noise: Why Most Predictions Fail but Some Don't)]] by Nate Silver
+- [[file:./blogs/anti-destruction-in-china.org][李可乐抗拆记]] by 李承鹏
+- [[file:./blogs/dark-time.org][暗时间]] by 刘未鹏
+- [[file:./blogs/wolf-totem.org][狼图腾]] by 姜戎
+- [[file:./blogs/sears-the-baby-book.org][西尔斯育儿经]] by 威廉·西尔斯;玛莎·西尔斯
+- [[file:./blogs/platform-strategy.org][平台战略: 正在席卷全球的商业模式革命]] by 陈威如, 余卓轩
+- [[file:./blogs/nine-algos-that-changed-the-future.org][改变未来的九大算法(Nine Algorithms that Changed the Future)]] by John. McCormick
+- [[file:./blogs/the-men-who-built-america.org][谁建造了美国(The men who built America)]] by 网易公开课
+- [[file:./blogs/that-man-looks-like-a-dog.org][(ZZ)那个人好像一条狗]] 周星驰 <大圣娶亲>
+- [[file:./blogs/three-body.org][三体(Three Body)]] by 刘慈欣
+- [[file:./blogs/growth-hacker.org][增长黑客(Growth Hacker)]] by 范冰
+- [[file:./blogs/lean-in.org][向前一步(Lean In)]] by Sheryl Sandberg
+- [[file:./blogs/the-hitchhikers-guide-to-the-galaxy.org][银河系漫游指南(The Hitchhiker's Guide to the Galaxy)]] by Douglas Adams
+- [[file:./blogs/thinking-fast-and-slow.org][思考,快与慢(Thinking, Fast and Slow)]] by Daniel Kahneman
+- [[file:./blogs/from-zero-to-one.org][从0到1(From Zero To One)]] by Peter Thiel
+- [[file:./blogs/the-great-game.org][伟大的博弈: 华尔街金融帝国的崛起(The Great Game: The Emergence of Wall Street as a World Power)]] by John Gordon
+- [[file:./blogs/delivering-happiness.org][奉上幸福(Devliering Happiness)]] by 谢家华
+- [[file:./blogs/convict-conditioning.org][囚徒健身(Convict Conditioning)]] by Paul Wade
+- [[file:./blogs/the-paypal-wars.org][支付战争(The PayPal Wars)]] by Eric Jackson
+- [[file:./blogs/how-google-works.org][谷歌是如何运营的(How Google Works)]] by Eric Schmidt
+- [[file:./blogs/reminiscences-of-stock-broker.org][股票作手回忆录(Reminiscences of stock broker)]] by Jesse Livermore
+- [[file:./blogs/zhihu-daily-economy.org][知乎周刊-日常经济学]]
+- [[file:./blogs/the-shortest-history-of-europe.org][极简欧洲史]] by John Hirst
+- [[file:./blogs/majority-of-silent-people.org][沉默的大多数]] by 王小波
+- [[file:./blogs/mac-talk.org][MacTalk]] by 池建强
+- [[file:./blogs/zhihu-hft-engineer.org][我是高频交易工程师：知乎董可人自选集]]
