@@ -23,6 +23,7 @@ fi
 
 # post processing html files.
 ./pp-html
+cp .nojekyll CNAME sitemap.txt sitemap.xml ../
 
 git add *
 git commit -a -m 'x'

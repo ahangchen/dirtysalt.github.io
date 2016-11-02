@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title>Network Programming</title>
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="dirtysalt" />
+<link rel="shortcut icon" href="http://dirtysalt.info/css/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="./css/site.css" />
+</head>
+<body>
+<div id="content">
+<h1 class="title">Network Programming</h1>
+<ul class="org-ul">
+<li><a href="unp.html">UNP</a> Unix网络编程(Unix Network Programming),W. Richard Stevens的又一神作。笔记里面只是对于TCP原理有比较详细讨论，这部分笔记也包含了TCP Illustrated v1里面和TCP相关的章节内容。对于编程方面也着重TCP socket使用，毕竟在大部分应用场景下面我们选用TCP模型更多，并且TCP里面有很多非常琐碎的知识。</li>
+<li><a href="https://github.com/dirtysalt/tomb/tree/master/cc/itachi">itachi</a> 自己两天时间写完的异步网络编程框架，当然有很多地方需要改进，但是内核基本稳定了。并且在上面做了asocket封装，编写网络程序非常方便。</li>
+<li><a href="./libev.html">libev</a> 开源的事件触发器。被认为是更高效的libevent. <a href="https://github.com/dirtysalt/itachi">itachi</a> 这个项目开始想自己编写事件触发器，但是发现工作比较琐碎枯燥，所以底层还是选择使用libev.</li>
+<li><a href="hpserver.html">hpserver</a> 开源的网络编程框架。可以当做一个入门级的网络编程框架阅读。这个是我最开始阅读的网络编程框架(1st).</li>
+<li><a href="nmstl.html">nmstl</a> 开源的网络编程框架。一个很早期的作品，代码十分简洁。主要是内部实现了SEDA的思想。这个是我第二个阅读的网络编程框架(2nd).</li>
+<li><a href="muduo.html">muduo</a> 开源的网络编程框架。作者理想中的网络编程框架实现，里面有很多mina/netty的影子。这个是我三个阅读的网络编程框架(3rd).</li>
+<li><a href="kylin.html">kylin</a> Baidu in-house的异步编程框架，是<a href="http://weibo.com/linshiding">linsd(百度首席架构师林仕鼎)</a>的神作，通过阅读这个框架的代码让我理解了异步编程模型。这个是我第四个阅读的网络编程框架(4th).</li>
+<li><a href="zeromq.html">zeromq</a> 开源的消息传输系统。颠覆我们思考和编写网络通信程序的方式。</li>
+<li><a href="ace.html">ACE</a> 开源的网络编程框架。非常重量级，也被人诟病为学术产物而不是适合生产实践。</li>
+<li><a href="netty.html">netty</a> an asynchronous event-driven network application framework in <b>Java</b> based on Java NIO.</li>
+<li><a href="nginx.html">nginx</a> an open source reverse proxy server for HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load balancer, HTTP cache, and a web server (origin server). (简直就是webserver里面的要你命3000啊!)</li>
+<li><a href="./inside-nginx-how-we-designed-for-performance-scale.html">深入NGINX：我们如何设计它的性能和扩展性</a></li>
+<li><a href="finagle.html">finagle</a> an extensible RPC system for the JVM, used to construct high-concurrency servers.</li>
+<li><a href="./haproxy.html">HAProxy</a> 高性能的负载均衡器，可以提供4（TCP），7（HTTP）层反向代理。</li>
+<li><a href="./gunicorn.html">gunicorn</a> Python WSGI HTTP Server. green unicorn(Ruby实现)</li>
+</ul>
+</div>
+<!-- DISQUS BEGIN --><div id="disqus_thread"></div><script type="text/javascript">/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * *//* required: replace example with your forum shortname  */var disqus_shortname = 'dirlt';var disqus_identifier = 'network.html';var disqus_title = 'network.html';var disqus_url = 'http://dirtysalt.info/network.html';/* * * DON'T EDIT BELOW THIS LINE * * */(function() {var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);})();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><!-- DISQUS END --></body>
+</html>

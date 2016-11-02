@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2016-11-02 三 20:10 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thoughts on Prog Lang</title>
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="dirtysalt" />
+<link rel="shortcut icon" href="http://dirtysalt.info/css/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="./css/site.css" />
+</head>
+<body>
+<div id="content">
+<h1 class="title">Thoughts on Prog Lang</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline1">1. 编程语言要素</a></li>
+<li><a href="#orgheadline2">2. 正确的语言特征</a></li>
+<li><a href="#orgheadline3">3. The Pieces of a Programming Language</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1"><span class="section-number-2">1</span> 编程语言要素</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+所谓编程语言要素就是说，一旦我们对于这些编程语言的要素掌握之后，我们就可以用这个语言做一些事情了。编程语言要素必须是基本的(atomic)，
+然后我们在学习语言的时候，首先学习这些基本的内容之后，就可以开动了。不要使用形式的东西来概括，必须是一些可以put into practice的东西
+</p>
+
+<ul class="org-ul">
+<li>基本类型 // 比如字符串如何表示等</li>
+<li>复合结构 // 如何将基本类型复合出来</li>
+<li>内存管理 // 如何进行内存分配释放</li>
+<li>程序结构 // 变量作用域，变量声明，类的访问权限，程序结构</li>
+<li>语言特有特性 // 反射，动态代码生成，continuation</li>
+<li>工程组织性 // 如何组织一个大的项目，如何服用代码比如库</li>
+<li>文件系统 // 如何操作文件，读取特定字节等</li>
+<li>并发控制 // 比如进程，线程，锁</li>
+<li>网络通信 // 通讯设施</li>
+<li>C/C++扩展 // 如何使用C/C++来编写扩展提高效率</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline2" class="outline-2">
+<h2 id="orgheadline2"><span class="section-number-2">2</span> 正确的语言特征</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+一种语言并不会因为拥有其他语言所没有的特征，就比其他的语言更好。重要的问题并不在于语言有多少特征，而在于它所拥有的特征是否足以在某个希望的应用领域支持某种所希望的程序设计风格
+</p>
+
+<ul class="org-ul">
+<li>所有特征必须清晰优雅地集成在语言中</li>
+<li>能够组合这些特征得到一个解决方案</li>
+<li>减少荒谬和专用的特征</li>
+<li>任何特征的实现都不应该给未使用该特征的程序强加上明显的额外开销</li>
+<li>用户只需要了解自己在编写程序时所明确使用的那个语言子集</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline3" class="outline-2">
+<h2 id="orgheadline3"><span class="section-number-2">3</span> The Pieces of a Programming Language</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+<a href="https://class.coursera.org/proglang-003/lecture">https://class.coursera.org/proglang-003/lecture</a>
+</p>
+
+<p>
+Now that we have learned enough ML to write some simple functions and programs with it, we can list the essential “pieces” necessary for defining and learning any programming language:
+</p>
+<ul class="org-ul">
+<li>Syntax: How do you write the various parts of the language?</li>
+<li>Semantics: What do the various language features mean? For example, how are expressions evaluated?</li>
+<li>Idioms: What are the common approaches to using the language features to express computations?</li>
+<li>Libraries: What has already been written for you? How do you do things you could not do without library support (like access files)?</li>
+<li>Tools: What is available for manipulating programs in the language (compilers, read-eval-print loops, debuggers, &#x2026;)</li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</html>

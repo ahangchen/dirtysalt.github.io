@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2016-11-02 三 20:10 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title>scheme</title>
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="dirtysalt" />
+<link rel="shortcut icon" href="http://dirtysalt.info/css/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="./css/site.css" />
+</head>
+<body>
+<div id="content">
+<h1 class="title">scheme</h1>
+<ul class="org-ul">
+<li><a href="http://www.scheme.com/">http://www.scheme.com/</a></li>
+<li>SICP <a href="http://mitpress.mit.edu/sicp/">http://mitpress.mit.edu/sicp/</a></li>
+<li>TSPL <a href="http://www.scheme.com/tspl4/">http://www.scheme.com/tspl4/</a></li>
+<li>Daniel P. Friedman <a href="http://www.cs.indiana.edu/~dfried/">http://www.cs.indiana.edu/~dfried/</a></li>
+<li><a href="ftp://ftp.cs.utexas.edu/pub/garbage/cs345/schintro-v14/schintro_toc.html">An Introduction to Scheme and its Implementation</a></li>
+</ul>
+
+<hr  />
+<p>
+Church Counter(邱奇计数)
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-scheme">(<span class="org-keyword">define</span> <span class="org-function-name">zero</span> (<span class="org-keyword">lambda</span> (f) (<span class="org-keyword">lambda</span> (x) x)))
+(<span class="org-keyword">define</span> (<span class="org-function-name">add-1</span> n) (<span class="org-keyword">lambda</span> (f) (<span class="org-keyword">lambda</span> (x) (f ((n f) x)))))
+</pre>
+</div>
+
+<p>
+我们把zero带入add-1
+</p>
+<pre class="example">
+(lambda (f) (lambda (x) (f ((lambda (f) (lambda (x) x)) f) x)))
+ =&gt; (lambda (f) (lambda (x) (f ((lambda (x) x) x))))
+ =&gt; (lambda (f) (lambda (x) (f x)))
+</pre>
+<p>
+这个时候我们可以和zero比较，就会发现里面多了一次f操作，这就是计数操作
+</p>
+
+<p>
+one, two可以写为
+</p>
+<div class="org-src-container">
+
+<pre class="src src-scheme">(<span class="org-keyword">define</span> <span class="org-function-name">one</span> (<span class="org-keyword">lambda</span> (f) (<span class="org-keyword">lambda</span> (x) (f x))))
+(<span class="org-keyword">define</span> <span class="org-function-name">two</span> (<span class="org-keyword">lambda</span> (f) (<span class="org-keyword">lambda</span> (x) (f (f x)))))
+</pre>
+</div>
+
+<p>
+(add m n)可以写为
+</p>
+<div class="org-src-container">
+
+<pre class="src src-scheme">(<span class="org-keyword">define</span> (<span class="org-function-name">add</span> m n) (<span class="org-keyword">lambda</span> (f) (<span class="org-keyword">lambda</span> (x) ((m f) ((n f) x)))))
+</pre>
+</div>
+</div>
+</body>
+</html>
