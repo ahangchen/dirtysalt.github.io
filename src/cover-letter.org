@@ -12,7 +12,7 @@ Besides experience of distributed systems design and implementation:
 - good understanding about compiler technique. Designed a language from scratch and implemented its compiler to generate x86 assembly code.
 - learned machine learning theory and practical technique on Coursera in the past 6 months, and took part in few competitions on kaggle.
 
-Blog: http://dirtysalt.info (Unfortunately all contents are in Chinese)
+Blog: http://dirtysalt.github.io
 Github: https://github.com/dirtysalt/
 LinkedIn: https://www.linkedin.com/in/dirtysalt
 

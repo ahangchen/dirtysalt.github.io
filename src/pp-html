@@ -26,7 +26,7 @@ BODY_END = """
 var disqus_shortname = 'dirlt';
 var disqus_identifier = '%(id)s';
 var disqus_title = '%(id)s';
-var disqus_url = 'http://dirtysalt.info/%(id)s';
+var disqus_url = 'http://dirtysalt.github.io/%(id)s';
 /* * * DON'T EDIT BELOW THIS LINE * * */
 (function() {
 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -70,7 +70,7 @@ for f in glob.glob('../*.html')+glob.glob('../blogs/*.html'):
     print 'add code to \'%s\''%(f)
     open(f,'w').writelines(map(lambda x:x + '\n', ds))
 
-site = 'http://dirtysalt.info/'
+site = 'http://dirtysalt.github.io/'
 files = glob.glob('./src/*.org') + glob.glob('./src/blogs/*.org')
 with open('sitemap.txt', 'w') as fh:
     fh.writelines(map(lambda x: site + x[len('./src/'):-3] + 'html\n', files))
