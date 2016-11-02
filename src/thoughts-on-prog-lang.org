@@ -1,0 +1,35 @@
+#+title: Thoughts on Prog Lang
+
+** 编程语言要素
+所谓编程语言要素就是说，一旦我们对于这些编程语言的要素掌握之后，我们就可以用这个语言做一些事情了。编程语言要素必须是基本的(atomic)，
+然后我们在学习语言的时候，首先学习这些基本的内容之后，就可以开动了。不要使用形式的东西来概括，必须是一些可以put into practice的东西
+
+- 基本类型 // 比如字符串如何表示等
+- 复合结构 // 如何将基本类型复合出来
+- 内存管理 // 如何进行内存分配释放
+- 程序结构 // 变量作用域，变量声明，类的访问权限，程序结构
+- 语言特有特性 // 反射，动态代码生成，continuation
+- 工程组织性 // 如何组织一个大的项目，如何服用代码比如库
+- 文件系统 // 如何操作文件，读取特定字节等
+- 并发控制 // 比如进程，线程，锁
+- 网络通信 // 通讯设施
+- C/C++扩展 // 如何使用C/C++来编写扩展提高效率
+
+** 正确的语言特征
+一种语言并不会因为拥有其他语言所没有的特征，就比其他的语言更好。重要的问题并不在于语言有多少特征，而在于它所拥有的特征是否足以在某个希望的应用领域支持某种所希望的程序设计风格
+
+- 所有特征必须清晰优雅地集成在语言中
+- 能够组合这些特征得到一个解决方案
+- 减少荒谬和专用的特征
+- 任何特征的实现都不应该给未使用该特征的程序强加上明显的额外开销
+- 用户只需要了解自己在编写程序时所明确使用的那个语言子集
+
+** The Pieces of a Programming Language
+https://class.coursera.org/proglang-003/lecture
+
+Now that we have learned enough ML to write some simple functions and programs with it, we can list the essential “pieces” necessary for defining and learning any programming language:
+   - Syntax: How do you write the various parts of the language?
+   - Semantics: What do the various language features mean? For example, how are expressions evaluated?
+   - Idioms: What are the common approaches to using the language features to express computations?
+   - Libraries: What has already been written for you? How do you do things you could not do without library support (like access files)?
+   - Tools: What is available for manipulating programs in the language (compilers, read-eval-print loops, debuggers, ...)

@@ -1,0 +1,95 @@
+#+title: Yan Zhang's CV
+#+options: toc:nil
+
+* Contact
+- Yan Zhang, dirtysalt1987 AT gmail DOT com
+- GitHub: https://github.com/dirtysalt/
+- LinkedIn: https://www.linkedin.com/in/dirtysalt
+
+* Summary
+Extensive experience in:
+- large-scale distributed system design and implementation.
+- network programming framework design and implementation.
+- storage system design and implementation.
+- performance optimization and tuning for systems and applications.
+- system software development.
+- big data processing and analysis.
+- machine learning and data mining.
+
+Specialities:
+- proficient in C/C++, Python, Java, Scala.
+- solid knowledge of data structure and algorithm.
+- extremely familiar with system development toolchain on linux.
+- good understanding of compiler technique and related tools.
+
+* Experience
+Senior Software Architect, Data Platform, Umeng, 2013.11 - 2016.4
+
+- infrastructure on big data processing.
+- machine learning on moderate-sized data.
+
+Software Engineer, [[http://logzilla.net/][Logzilla]], 2015.4 - 2015.8 (Remote, as Consultant)
+
+- performance tuning to to support ~200k eps ingestion.
+- implement a new event storage engine to support ~1M eps.
+
+Software Engineer, [[http://galeracluster.com/][Galera]], 2014.4 - 2014.11 (Remote, as Consultant)
+
+- [[https://github.com/codership/galera][galera]], A synchronous multi-master replication library
+
+Software Architect, Data Platform, Umeng, 2013.2 - 2013.11
+
+- data analytics and data mining on Hadoop.
+
+- "kvproxy", an asynchronous high-performance HTTP server for easily accessing various database systems such as HBase, MySQL, Riak etc. It's written in Scala and Finagle, use Google Protocol-Buffers as data exchange format and Google Guava LRUCache as application-level cache. Since Finagle wraps asynchronous function in concept of 'Future' and encourages developer to take server as function(Your Server as a Function. http://monkey.org/~marius/funsrv.pdf) , so KVproxy could be used not only as server, but also as library that could be easily embedded into other applications.
+
+Senior Software Engineer, Data Platform, Umeng, 2012.6 - 2013.2
+
+- design Umeng internal Realtime+Batch Architecture. (aka. Lambda Architecture http://nathanmarz.com/blog/how-to-beat-the-cap-theorem.html)
+
+- optimize Hadoop cluster usage.
+
+- performance tuning of MapReduce jobs from perspectives of
+  1. application. use HBase bulk-loading instead of writing data to HBase directly for better throughput and stability.
+  2. algorithm. use HyperLogLog algorithm instead of using set to calculate cardinality for better performance and any-time-range query ability.
+  3. system. turn off MapReduce speculative mode when read data from HBase.
+  4. language. use JNI instead of pure Java code to accelerate cpu computation.
+  5. kernel. change kernel parameters like /proc/sys/vm/zone_reclaim_mode and /sys/kernel/mm/redhat_transparent_hugepage/enabled.
+
+- "fast-hbase-rest", an asynchronous high-performance HTTP server written in Netty for easily accessing HBase in multiple languages by using Google Protocol-Buffers. Since HBase only provides underlying block cache, FastHBaseRest implements item cache on application level using Google Guava for better read performance. Comparing to HBase embedded HTTP server('hbase rest'), the access latency is 20% lower and transfer size is 40% lower. Meanwhile it has more capabilities like request rewriting.
+
+- "usched", a internal job scheduler system written from scratch to arrange jobs which are codependent. It defines and implements a DSL called JDL(Job Description Language) which is used to describe dependencies between jobs and properties of jobs. It runs as a HTTP server and provides a web-console to manage jobs including submissions and running status dashboard etc. Thousand MapReduce jobs are scheduled by usched each day while the latency is below 5sec.
+
+[[file:images/baidu-inf-com-2010q4.jpg][Senior Software Engineer]], Baidu, 2011.8-2012.6
+
+- INF(infrastructure) HPC(high performance computing) Team.
+
+- "dstream", an in-house distributed realtime stream processing system in C++ like Twitter's Storm and Yahoo!'s S4. The alpha version of DStream with 10 nodes can process 1 million tuples per second while keep the latency less than 100ms.
+
+Software Engineer, Baidu, 2010.6 - 2011.8
+
+- INF(infrastructure) COM(component) Team.
+
+- "[[https://github.com/dirtysalt/tomb/tree/master/cc/itachi][itachi]]", an open-source high performance asynchronous network programming framework in C++.
+
+- "comake2", an in-house build system in Python, takes advantages of some open-source build systems such as SCons, CMake, Google's GYP, Boost's Jam etc. It have been wildly used in Baidu for continuous integration.
+
+- "infpack", an in-house data exchange format in C++, exceeds Google's Protocol-Buffers and Facebook's Thrift on the speed of serialization and deserialization about 20~30% faster while with 10~20% smaller size. Its generated code is carefully hand-tuned so implementation is very efficient.
+
+- DDBS(distributed database system), an in-house distributed relational database system. I mainly worked on SQL parser to extend syntax for more capability and implementing a SPASS(single point automatic switch system) for its fault-tolerant feature.
+
+- maintainer and developer of Baidu's common library including BSL(Baidu standard library), Ullib(wraps socket io, file io, and some linux syscalls etc.), ComDB(a embedded high-performance key value storage system), memory allocator, character encoding, regular expression, signature and hash algorithm, url handling, http client, lock-free data structures and algorithms etc.
+
+Software Engineering Intern, Baidu, 2008.7 - 2010.6
+
+- IBase COM(component) Team.
+
+- "vitamin", an in-house tool to detect the potential bugs in C/C++ source code by static analyzation. It reports thousands of valuable warnings by scanning the whole Baidu's code repository while keeping the rate of fake warnings relatively low.
+
+- "idl-compiler", an in-house compiler translates a DSL(domain specified language) called 'idl'(interface description language, which is designed by myself) to the code that support data exchange between C/C++ struct/class and Mcpack(an in-house data pack like Google's Protocol-Buffers) with the help of Flex and Bison.
+
+- maintainer and developer of Baidu common libraries including Ullib(wraps socket io, file io, and some linux syscalls etc.), ComDB(a embedded high-performance key value storage system), memory allocator, character encoding, regular expression, signature and hash algorithm, url handling, http client etc.
+
+* Education
+- MS. Computer Science. [[http://www.sdu.edu.cn/][Shandong University]]
+- BE. Electronic Engineering. [[http://www.sdu.edu.cn/][Shandong University]]

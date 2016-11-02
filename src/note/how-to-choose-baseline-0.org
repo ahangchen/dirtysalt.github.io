@@ -1,0 +1,17 @@
+#+title: 选用什么方法做baseline-0
+
+拿到一个问题，我们应该考虑用什么模型来尝试？
+
+这篇 [[http://machinelearningmastery.com/use-random-forest-testing-179-classifiers-121-datasets/][文章]] 在暗示我们，对于分类问题应该使用RF和Gaussian-SVM.
+
+我和同学稍微讨论了一下觉得还是非常有道理的，RF和SVM其实能够捕捉到的是完全两种不同的结构。按道理我们应该首先尝试低维度模型，所以GSVM可以考虑将gamma设置为0（或者是用linear-SVM). 如果GSVM可以很好地处理这个问题的话，其实我们可以分析gamma，然后自己手动来做特征映射，这样在实际大规模数据上就可以直接做LR了。
+
+从基本结构上出发，其实下面几个方法可以涵盖所有分类问题：1. Decision Tree(结构复杂) 2. Naive Bayes(概率模型) 3. SVM(线性模型+核方法) 4. kNN(基于实例)
+
+从增强方法上看就是Bagging + Blending. 这种增强办法作用在SVM, NB, kNN上是没有太多意义的，作用在DTree上的话就分别得到了RF+GBDT. 
+
+所以如果是分类问题的话，我们还应该增加三个方法作为尝试点：GBDT, NB, kNN.
+
+这几个方法其实也可以作为解决回归问题的起点。
+
+所以我觉得，如果一开始遇到分类和回归问题的话，可以考虑用下面5个模型作为尝试起点：1. RF 2. SVM 3. GBDT 4. NB 5. kNN. 调优之后再考虑如何做bagging/blending.

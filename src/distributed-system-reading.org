@@ -1,0 +1,6 @@
+#+title: distributed-system-reading
+- [[http://dancres.org/reading_list.html][Distributed Systems Reading List]]
+- [[http://duanple.blog.163.com/blog/static/709717672011330101333271/][分布式系统领域经典论文翻译集]]
+- [[http://duanple.blog.163.com/blog/static/7097176720119791920962/][Hadoop Reading List]]
+
+

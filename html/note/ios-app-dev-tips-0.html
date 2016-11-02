@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title>iOS App Dev Tips-0</title>
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="dirtysalt" />
+<link rel="shortcut icon" href="http://dirtysalt.info/css/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="../css/site.css" />
+</head>
+<body>
+<div id="content">
+<h1 class="title">iOS App Dev Tips-0</h1>
+<p>
+如果table view didSelectPath没有被调用的话，那么检查一下table view是否允许被select.(属性里面Selection可能被设置成了None)  <a href="http://stackoverflow.com/questions/255927/didselectrowatindexpath-not-being-called">link</a>
+</p>
+
+<p>
+<a href="http://www.appcoda.com/customize-table-view-cells-for-uitableview/">创建自定义TableViewCell</a>
+</p>
+
+<p>
+同时使用TabBar和TableView时候，tableview最下面一个cell会被TabBar挡住。需要将TabBar的属性Bottom Bar设置成为Opaque Tab Bar. <a href="http://stackoverflow.com/questions/19173630/ios-7-custom-tableview-is-under-tabbar">link</a>
+</p>
+
+<p>
+对外默认不能发起HTTP这种非加密请求，除非显式地将这些域名添加到白名单 <a href="http://stackoverflow.com/questions/32631184/the-resource-could-not-be-loaded-because-the-app-transport-security-policy-requi">link</a>
+</p>
+<div class="org-src-container">
+
+<pre class="src src-XML">&lt;key&gt;NSAppTransportSecurity&lt;/key&gt;
+&lt;dict&gt;  
+  &lt;key&gt;NSExceptionDomains&lt;/key&gt;
+  &lt;dict&gt;
+    &lt;key&gt;domain.com&lt;/key&gt;
+    &lt;dict&gt;
+      &lt;key&gt;NSExceptionAllowsInsecureHTTPLoads&lt;/key&gt;&lt;true/&gt;
+      &lt;key&gt;NSIncludesSubdomains&lt;/key&gt;&lt;true/&gt;
+    &lt;/dict&gt;
+  &lt;/dict&gt;
+&lt;/dict&gt;
+</pre>
+</div>
+</div>
+<!-- DISQUS BEGIN --><div id="disqus_thread"></div><script type="text/javascript">/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * *//* required: replace example with your forum shortname  */var disqus_shortname = 'dirlt';var disqus_identifier = 'note/ios-app-dev-tips-0.html';var disqus_title = 'note/ios-app-dev-tips-0.html';var disqus_url = 'http://dirtysalt.info/note/ios-app-dev-tips-0.html';/* * * DON'T EDIT BELOW THIS LINE * * */(function() {var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);})();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><!-- DISQUS END --></body>
+</html>

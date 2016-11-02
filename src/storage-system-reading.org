@@ -1,0 +1,3 @@
+#+title: storage-system-reading
+- [[http://redbook.cs.berkeley.edu/][Readings in Database Systems]]
+- [[http://www.cs286.net/home/reading-list][Reading List - CS286 Fall 2014]]

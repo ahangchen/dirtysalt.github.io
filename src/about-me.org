@@ -1,0 +1,15 @@
+#+title: About Me
+
+file:./images/valve-logo.jpg
+
+- dirtysalt1987 AT gmail DOT com, [[file:./resume.org][CV]] ([[file:./resume-cn.org][中文]]), +[[file:./cover-letter.org][Cover Letter]]+
+- [[http://www.linkedin.com/in/dirtysalt][LinkedIn]], [[http://weibo.com/dirlt][微博]], [[https://twitter.com/dirtysalt][Twitter]], [[https://github.com/dirtysalt][GitHub]], [[http://www.jianshu.com/users/8bd69eb6a57a/][简书]]
+- [[file:images/um-arch.pdf][Umeng Analytical Architecture]]
+- [[file:images/um-talk.pdf][如何在一天之内收集3.6亿移动设备的数据]]
+- Open your mind, and open your eys. (放眼未来, 自由想象)
+
+这个站点最开始是放在同事 [[http://xuchaoqian.com/][xuchaoqian]] 免费提供给我的空间下的. 当时还没有dirlt.com这个域名, 使用的是他给的域名下面~/dirlt目录. 之后申请了dirlt.com这个域名, 也开始考虑自己申请主机空间的事情. 因为翻墙的需要购买了linode主机, 所以顺便把这个站点放在上面, 不过访问速度非常慢, 而且站点内容还是太少, 所以就搁置着. 再后来github开始提供pages服务, 因为这个站点是完全的静态页, 所以迁移过去没有花太大力气. 考虑到github pages有CDN支持, 因此访问效果非常好. 但是近期又发现github把baidu爬虫给屏蔽了, 导致从百度上无法搜索到这个站点, 我又把这个站点从github迁移到了gitlab上. 设计上除了一些细节不同, 可以认为gitlab pages是照搬github pages, 所以迁移非常顺手.
+
+为什么用dirlt做域名? 因为dirtysalt有点长, 我希望有个短些但同时能保持特点的词, 而`dirlt = 'dirtysalt'[:3] + 'dirtysat'[-2:]`. 至于为什么叫dirtysalt就当做练习题吧;0. 之前我经常混用dirlt和dirtysalt, 所以这些id会出现在网站账号上以及我写的代码和配置文件里面, 后来才逐渐地区分开, 用dirtysalt来注册账号以及填写username, 而dirlt大部分时候出现在代码和配置文件中.
+
+软件工程师，8年软件开发经验。在大规模分布式系统设计和实现, 以及大数据分析和处理上有着丰富的实践经验。曾在百度基础架构部任高级工程师，研究和开发内部基础组件工具和分布式系统，被其他产品线广泛使用。之后在友盟任高级架构师，负责友盟的离线数据处理分析系统，从零开始搭建大数据平台用于处理海量日志和数据挖掘。友盟数据平台系统每日处理 billion 级别日志，并且通过机器学习/深度学习等技术从日志中勾勒出用户画像。

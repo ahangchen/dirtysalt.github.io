@@ -1,0 +1,5 @@
+#+title: 一些Spark例子程序
+
+- [[https://github.com/dirtysalt/tomb/blob/master/scala/spark/src/main/scala/AvroDataFrame.scala][使用Spark DataFrame操作Avro文件]]
+- [[https://github.com/dirtysalt/tomb/blob/master/scala/spark/src/main/scala/AvroRawRDD.scala][使用Spark RDD操作Avro文件]]
+- [[https://github.com/dirtysalt/tomb/blob/master/scala/spark/src/main/scala/TestOnHBase.scala][使用Spark读写HBase]]

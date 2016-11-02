@@ -1,0 +1,5 @@
+#+title: continuation
+- [[http://en.wikipedia.org/wiki/Continuation][Wikipedia Continuation]]
+- [[http://www.ps.uni-saarland.de/~duchier/python/continuations.html][Continuations Made Simple and Illustrated]]
+- [[http://library.readscheme.org/page6.html][Continuations and Continuation Passing Style]]
+- [[file:./the-little-schemer.org][The Little Schemer]] 里面有一些关于continuation/CPS的内容

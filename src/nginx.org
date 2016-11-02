@@ -1,0 +1,10 @@
+#+title: nginx
+http://nginx.org/
+
+** Tips
+*** 支持软链接
+#+BEGIN_EXAMPLE
+http {
+    disable_symlinks off;
+}
+#+END_EXAMPLE

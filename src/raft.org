@@ -1,0 +1,4 @@
+#+title: Raft
+- https://ramcloud.stanford.edu/wiki/download/attachments/11370504/raft.pdf
+- http://the-paper-trail.org/blog/on-raft-briefly/
+- https://speakerdeck.com/benbjohnson/raft-the-understandable-distributed-consensus-protocol

@@ -1,0 +1,13 @@
+#+title: Clojure
+- http://clojure.org/
+- http://clojure.github.com/clojure/
+- http://clojure-doc.org/
+- Clojure made simple http://clojure.jr0cket.co.uk/
+- Clojure - Functional Programming for the JVM http://java.ociweb.com/mark/clojure/article.html
+- Clojure Handbook (by jamesqiu) http://qiujj.com/static/clojure-handbook.html
+- technomancy/leiningen · GitHub https://github.com/technomancy/leiningen#readme
+- Clojars https://clojars.org/ Clojars is a dead easy community repository for open source Clojure libraries.
+- technomancy/leiningen · GitHub https://github.com/technomancy/leiningen clojure自动构建工具
+  - http://github.com/downloads/clojure/clojure/clojure-1.2.0.zip
+  - http://github.com/downloads/clojure/clojure-contrib/clojure-contrib-1.2.0.zip
+  - #note: 使用lein可以搞定这些东西

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2016-09-20 二 18:45 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title>搭建直播平台</title>
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="dirtysalt" />
+<style type="text/css">html {
+    font-family: Georgia, "Microsoft Yahei", "WenQuanYi Micro Hei";
+}
+
+/* pre { */
+/*     background-color: #eee; */
+/*     box-shadow: 5px 5px 5px #888; */
+/*     border: none; */
+/*     padding: 5pt; */
+/*     margin-bottom: 14pt; */
+/*     color: black; */
+/*     padding: 12pt; */
+/*     font-family: Consolas; */
+/*     font-size: 95%; */
+/*     overflow: auto; */
+/* } */
+
+.title  { /* text-align: center; */
+          margin-bottom: .2em; }
+.subtitle { /* text-align: center; */
+            font-size: medium;
+            font-weight: bold;
+            margin-top:0; }
+.todo   { font-family: monospace; color: red; }
+.done   { font-family: monospace; color: green; }
+.priority { font-family: monospace; color: orange; }
+.tag    { background-color: #eee; font-family: monospace;
+          padding: 2px; font-size: 80%; font-weight: normal; }
+.timestamp { color: #bebebe; }
+.timestamp-kwd { color: #5f9ea0; }
+.org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+.org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+.org-center { margin-left: auto; margin-right: auto; text-align: center; }
+.org-ul { padding-left: 10px; }
+.org-ol { padding-left: 20px; }
+ul { padding-left: 10px; }
+ol { padding-left: 20px; }
+
+.underline { text-decoration: underline; }
+#postamble p, #preamble p { font-size: 90%; margin: .2em; }
+p.verse { margin-left: 3%; }
+pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+}
+pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+}
+pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+}
+pre.src:hover:before { display: inline;}
+pre.src-sh:before    { content: 'sh'; }
+pre.src-bash:before  { content: 'sh'; }
+pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+pre.src-R:before     { content: 'R'; }
+pre.src-perl:before  { content: 'Perl'; }
+pre.src-java:before  { content: 'Java'; }
+pre.src-sql:before   { content: 'SQL'; }
+
+table { border-collapse:collapse; }
+caption.t-above { caption-side: top; }
+caption.t-bottom { caption-side: bottom; }
+td, th { vertical-align:top;  }
+th.org-right  { text-align: center;  }
+th.org-left   { text-align: center;   }
+th.org-center { text-align: center; }
+td.org-right  { text-align: right;  }
+td.org-left   { text-align: left;   }
+td.org-center { text-align: center; }
+dt { font-weight: bold; }
+.footpara { display: inline; }
+.footdef  { margin-bottom: 1em; }
+.figure { padding: 1em; }
+.figure p { /* text-align: center; */ }
+.inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+}
+#org-div-home-and-up
+{ text-align: right; font-size: 70%; white-space: nowrap; }
+textarea { overflow-x: auto; }
+.linenr { font-size: smaller }
+.code-highlighted { background-color: #ffff00; }
+.org-info-js_info-navigation { border-style: none; }
+#org-info-js_console-label
+{ font-size: 10px; font-weight: bold; white-space: nowrap; }
+.org-info-js_search-highlight
+{ background-color: #ffff00; color: #000000; font-weight: bold; }
+
+/* http://www.yinwang.org/main.css */
+
+body {
+    /* font-family:"lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; */
+    font-size: 18px;
+    margin: 5% 5% 5% 5%;
+    padding: 2% 5% 5% 5%;
+    width: 80%;
+    line-height: 150%;
+    border: 1px solid LightGrey;
+}
+
+H1 {
+    /* font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif; */
+}
+
+H2 {
+    /* font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif; */
+    margin-bottom: 60px;
+    margin-bottom: 40px;
+    padding: 5px;
+    border-bottom: 2px LightGrey solid;
+    width: 98%;
+    line-height: 150%;
+    color: #666666;
+}
+
+
+H3 {
+    /* font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif; */
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px LightGrey solid;
+    width: 98%;
+    line-height: 150%;
+    color: #666666;
+}
+
+
+H4 {
+    /* font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif; */
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px LightGrey solid;
+    width: 98%;
+    line-height: 150%;
+    color: #666666;
+}
+
+
+li {
+    margin-left: 10px;
+}
+
+
+blockquote {
+    border-left: 4px lightgrey solid;
+    padding-left: 5px;
+    margin-left: 20px;
+}
+
+
+pre {
+    font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;
+    font-size: 75%;
+    border: solid 1px lightgrey;
+    background-color: Ivory;
+    padding: 5px;
+    line-height: 130%;
+    margin-left: 10px;
+    width: 95%;
+}
+
+
+code {
+    font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;
+    font-size: 90%;
+}
+
+
+a {
+    text-decoration: none;
+    # cursor: crosshair;
+    border-bottom: 1px dashed Red;
+    padding: 1px;
+    # color: black;
+}
+
+
+a:hover {
+	background-color: LightGrey;
+}
+
+
+img {
+    box-shadow: 0 0 10px #555;
+    border-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0 0 10px #555;
+}
+
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+</head>
+<body>
+<div id="content">
+<h1 class="title">搭建直播平台</h1>
+<p>
+在公众号看到 @陈利人 老师发了一篇 <a href="http://mp.weixin.qq.com/s?__biz=MjM5ODIzNDQ3Mw==&amp;mid=2649966092&amp;idx=1&amp;sn=aaba8cc1f2b34860669f5fbfa814cf60&amp;scene=1&amp;srcid=0907JWAGxxTKGNJ4JGwTxuPu&amp;from=groupmessage&amp;isappinstalled=0#wechat_redirect">文章</a> 说如何搭建自己的直播平台，里面还给了比较详细的步骤。
+之前也好奇直播平台到底是个什么原理，就按照文章里面的步骤试了一把，代码放在了 <a href="https://github.com/dirtysalt/tomb/tree/master/misc/http-live-streaming">repo</a> 里面
+</p>
+
+<p>
+默认的nginx发布包里面是没有带 <a href="https://github.com/arut/nginx-rtmp-module">rtmp</a> 模块的话，所以还要自己编译一个有rtmp模块的nginx出来.
+</p>
+
+<p>
+HLS最新实现对mp3格式 <a href="https://github.com/arut/nginx-rtmp-module/issues/181">支持不好</a> ，所以使用文章里面的ffmpeg命令是没有audio的，换成aac格式就好了(-c:a libfdk_aac)
+</p>
+
+<p>
+<a href="https://github.com/dailymotion/hls.js">hls.js</a> 来做播放器 <a href="http://dailymotion.github.io/hls.js/demo/?src=http://localhost:8888/hls/movie.m3u8&amp;enableStreaming=true&amp;autoRecoverError=true&amp;enableWorker=true&amp;levelCapping=-1&amp;defaultAudioCodec=undefined">watch it</a>
+</p>
+</div>
+</body>
+</html>

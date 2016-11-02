@@ -1,0 +1,55 @@
+#!/bin/bash
+# publish org files.
+
+# find emacs.
+kernel=`uname -s`
+emacs="emacs"
+if [ $kernel"X" == "DarwinX" ]
+then
+    emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
+fi
+
+# should we publish generated html files.
+remote=${1:-"l"}
+
+if [ $remote == "r" ]
+then
+    cd ../../dirtysalt.github.io/
+    # git checkout gitcafe-pages
+    # git pull gitcafe gitcafe-pages
+    git pull origin master
+    if [ $? != 0 ]
+    then
+        cd -
+        echo "git pull failed!"
+        exit 1
+    fi
+    cd -
+fi
+
+# generate html files.
+$emacs --batch --script publish.el
+if [ $? != 0 ]
+then
+    echo "publish failed!"
+    exit 1
+fi
+
+# post-process html files.
+./pp-html
+
+cp .nojekyll CNAME sitemap.txt sitemap.xml ../../dirtysalt.github.io/
+# rsync images and css files.
+rsync -avrz images/ ../../dirtysalt.github.io/images/
+rsync -avrz css/ ../../dirtysalt.github.io/css/
+
+# publish generated html files to github/gitcafe.
+if [ $remote == "r" ]
+then
+    cd ../../dirtysalt.github.io/
+    git add *
+    git commit -a -m 'x'
+    # git push gitcafe gitcafe-pages
+    git push origin master
+    cd -
+fi

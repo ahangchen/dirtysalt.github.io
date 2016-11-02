@@ -1,0 +1,82 @@
+#!/usr/bin/env python
+#coding:utf-8
+#Copyright (C) dirlt
+
+HEAD = """
+""".replace('\n','')
+
+HEAD = ""
+
+HEAD_END = """
+""".replace('\n','')
+
+HEAD_END = ""
+
+BODY = """
+""".replace('\n','')
+
+BODY = ""
+
+BODY_END = """
+<!-- DISQUS BEGIN -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+/* required: replace example with your forum shortname  */
+var disqus_shortname = 'dirlt';
+var disqus_identifier = '%(id)s';
+var disqus_title = '%(id)s';
+var disqus_url = 'http://dirtysalt.info/%(id)s';
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<!-- DISQUS END -->
+""".replace('\n','')
+
+import glob
+import string
+import re
+r1 = re.compile(r'^<meta name="generated" content="')
+r2 = re.compile(r'^<p class="date">Date: ')
+r3 = re.compile(r'^<a href="http://validator.w3.org/check')
+r4 = re.compile(r'^<!-- \d{4}-\d{2}\-\d{2} ')
+
+for f in glob.glob('../www/*.html')+glob.glob('../www/note/*.html'):
+    if f.find('resume') != -1: continue # don't process my resume.
+    xs = open(f,'r').readlines()
+    id = f[len('../www/'):]
+    ds=[]
+    for x in xs:
+        x = x[:-1] # strip trailing \n
+        if x.find('<head>') != -1 and not x == '<head>' + HEAD + '\n':
+            ds.append('<head>' + HEAD)
+        elif x.find('<body>') != -1 and not x == '<body>' + BODY + '\n':
+            ds.append('<body>' + BODY)
+        elif x.find('</head>') != -1 and not x == HEAD_END + '</head>' + '\n':
+            ds.append(HEAD_END + '</head>')
+        elif x.find('</body>') != -1 and not x == BODY_END%(locals()) + '</body>' + '\n':
+            ds.append(BODY_END%(locals()) + '</body>')
+        elif r1.match(x) or r2.match(x) or \
+            r3.match(x) or r4.match(x):
+            pass
+        else:
+            ds.append(x)
+    print 'add code to \'%s\''%(f)
+    open(f,'w').writelines(map(lambda x:x + '\n', ds))
+
+site = 'http://dirtysalt.info/'
+files = glob.glob('*.org') + glob.glob('note/*.org')
+with open('sitemap.txt', 'w') as fh:
+    fh.writelines(map(lambda x: site + x[:-3] + 'html\n', files))
+with open('sitemap.xml', 'w') as fh:
+    fh.write("""<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    """)
+    fh.writelines(map(lambda x: '<url><loc>{}</loc></url>\n'.format(site + x[:-3] + 'html'), files))
+    fh.write('</urlset>\n')

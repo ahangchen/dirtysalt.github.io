@@ -1,0 +1,44 @@
+#+title: 章炎的中文简历
+#+options: toc:nil
+
+* 职业技能
+- 大规模分布式系统设计和实现
+- 大数据分析和处理
+- 熟悉C++,Python,Java,Scala等语言
+- 熟悉数据结构和算法
+- 熟悉Linux平台下的系统编程以及性能优化
+- 熟悉网络编程以及网络框架设计和实现
+- 熟悉编译原理并且开发过编译器
+
+* 工作经历
+高级软件架构师, 友盟, 2012.6 - 2016.4
+
+- realtime+batch架构(lambda架构). 利用批量计算结果来对实时计算结果进行补充。因为批量计算能够以全量数据作为输入能够获得更准确的结果并且容错性强但是延迟在小时级别，而实时计算虽然在延迟上在秒级别但是因为没有全量数据所以不能够进行更加深入分析。通过向realtime+batch架构演变，使得友盟统计能够在延迟和分析深入程度上都获得优势。
+
+- 优化Hadoop集群使用。通过分析在Hadoop集群上存放数据以及运行任务的特征进行相关优化
+  - 修改HDFS Block Placement Policy和Balancer代码将冷数据存放到存储廉价型机器上。
+  - 在elephant-bird上增加lzma算法，作用在冷数据上相比lzo算法空间节省60%以上。
+  - 使用HBase上 1)避免使用直接输出到hbase的方法而采用bulk-load方式提高吞吐 2)移除一些在hbase上的hash-join而替换成以hbase scan作为input的sort-merge join 3)在一些date prefix rowkey的table上，对rowkey头部增加hashcode来打散数据在region上分布
+  - 使用HyperLogLog算法来计算独立设备等需要去重指标，提高效率同时使得跨任意时间段查询成为可能。使用jni(java native interface)来重写CPU密集型的计算。
+
+- 支持多语言访问HBase的异步高性能服务fast-hbase-rest. 传输协议使用HTTP, 数据交换格式使用protobuf来达到多语言访问目的，底层使用asynchbase对hbase进行异步访问来提高吞吐。因为hbase内部只有在block-cache而没有item-cache, 通过在服务内部使用guava编写的应用层级别LRU cache可以有效减少访问延迟。服务模块化易于扩展，支持rewrite request功能可以屏蔽底层hbase schema的变化。相比hbase rest, 传输延迟减少20%, 传输数据减少40%.
+
+- 任务调度器usched. 通过调研一些业界已有的任务调度器比如oozie, azkaban等，然后结合友盟内部任务执行情况特点开发的任务调度器。系统定义了任务描述语言(JDL)允许指定任务之间的相互依赖关系，开始运行的时间以及一些触发条件，可以来对任务执行做精细化控制。usched通过HTTP请求提交任务和控制任务，有相对比较完善的web-console来管理，并且内置任务报警，命令运行输出重定向等功能。友盟每天运行的几百个Hadoop任务都是通过usched来进行调度的，调度延迟在5s以内。
+
+软件工程师(Remote. 顾问)
+- [[http://logzilla.net/][Logzilla]], 2015.4 - 2015.8
+- [[http://galeracluster.com/][Galera]], 2014.4 - 2014.11
+
+[[file:./images/baidu-inf-com-2010q4.jpg][高级软件工程师, 百度, 2008.8 - 2012.6]]
+
+- 分布式实时流式计算系统dstream, 针对需要实时处理流式数据的应用场景，解决hadoop批量处理模型不能够实时处理大数据的问题。经过调研和对比很多已有的分布式实时流式计算系统比streambase, storm等以及考虑百度自身应用需求，dstream可以在处理模型上保证数据不乱序不重复不丢失并且保持高吞吐和较低的延迟。众多产品线包括百度网页搜索检索实时反作弊，百度网页搜索点击实时反作弊，百度网盟等都正在基于dstream进行开发。现阶段发布的alpha版本单处理节点性能可以达到10K packets/s而处理延迟保证在100ms以内。
+
+- 异步网络编程框架itachi, 主要用来解决网络上系统需要处理client慢连接或者是系统连接后端，而同时需要达到高吞吐的问题。经过调研并且深入分析了很多开源的网络编程框架以及相关项目比如hpserver, muduo, boost.asio,libev, zeromq等，但是发现没有相对完整的高性能异步网络编程框架，所以动手实现。之后打算基于这个网络编程框架实现一些分布式组件或系统。itachi ping-pong可以达到千兆网卡极限而cpu idle保持在60%,慢连接能够轻松处理C100K.。
+
+- 数据传输/存储格式infpack, 基于对于一些业界已有的实现如Google的protobuf和Facebook的thrift的调研分析，通过在格式上将schema和实际数据分开，来降低数据包体积，提高打包和解包的性能。现在百度网页库的存储系统已经使用infpack来作为底层数据传输和存储的格式。infpack在数据包体积大小上比protobuf小5-10%，压缩和解压效率比protobuf提高20-30%。
+
+- 分布式数据库DDBS单点自动切换系统和ESQL解释器。DDBS是master-slave结构，通过将单机MySQL数据合理地sharding到不同的机器上来提高读写性能。单点自动切换系统能够在master出现故障之后协调slave选出新的master同时保持节点之间数据强一致。用户可以通过编写ESQL来告诉DDBS如何进行数据sharding. 现在百度凤巢已经基本上全面使用DDBS.
+
+- 持续集成开发构建系统comake2。通过调研和使用很多已有的开源构建系统比如Google的GYP, CMake, SCons等，然后结合百度内部开发情况开发的高度定制化的构建系统。现在百度内部已经有近百个项目都在使用comake2作为构建系统进行持续集成开发。comake2因为是动态语言Python编写并且机制透明，现已经有不同的项目组贡献了十几个插件。总体来说现该系统已经可以很好地支持Baidu内部持续集成开发需求。
+
+- 维护，升级和优化基础库。接手的基础库各式各样，而这些库被近千个模块所依赖和使用。不完全地包括socket io, 文件io, url处理，http处理，通用数据结构包括lock-free的B树，字符编码识别和转换，字典，正则表达式，多模匹配，签名，内存分配器，数据格式，IDL编译器，单机存储系统，网络传输系统等。

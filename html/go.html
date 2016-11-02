@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title>Go</title>
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="dirtysalt" />
+<link rel="shortcut icon" href="http://dirtysalt.info/css/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="./css/site.css" />
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Go</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline1">1. Go语言编程</a></li>
+</ul>
+</div>
+</div>
+<ul class="org-ul">
+<li><a href="http://golang.org/">The Go Programming Language</a></li>
+<li><a href="http://mmcgrana.github.com/2012/10/introducing-go-by-example.html">Introducing Go by Example</a></li>
+</ul>
+
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1"><span class="section-number-2">1</span> Go语言编程</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+by 许式伟，吕桂华
+</p>
+
+<p>
+顺序编程
+</p>
+<ul class="org-ul">
+<li>有限的类型推导
+<ul class="org-ul">
+<li>`var k = "hello"` or `k := "hello"`</li>
+<li>不会对函数返回值类型进行推导</li>
+</ul></li>
+<li>不定参数 `args &#x2026;int` 可以认为是数组切片类型 `args []int`</li>
+<li>`range`用来遍历数组, 切片, 以及字典.</li>
+<li>取消`while`, 只保留`for`.
+<ul class="org-ul">
+<li>for &lt;init&gt;; &lt;loop&gt;; &lt;pred&gt; { \n &#x2026; }</li>
+<li>for &lt;loop&gt; { \n &#x2026; }</li>
+<li>for { \n &#x2026; }</li>
+</ul></li>
+<li>多重赋值, 多值返回, 匿名函数与闭包</li>
+<li>错误处理. error接口</li>
+<li>RAII解决方案. defer</li>
+<li>异常传播. panic + recover
+<ul class="org-ul">
+<li>panic(value). 触发异常并携带value</li>
+<li>if r := recover() ; r != nil 捕获可能的异常并处理.</li>
+</ul></li>
+</ul>
+
+<p>
+类型系统
+</p>
+<ul class="org-ul">
+<li>值语义 vs. 引用语义
+<ul class="org-ul">
+<li>大部分cases都是值语义</li>
+<li>看起来像引用语义的有
+<ol class="org-ol">
+<li>数组切片</li>
+<li>map</li>
+<li>channel</li>
+<li>interface</li>
+</ol></li>
+<li>这些"引用语义"类型内部实现都是维护指针</li>
+</ul></li>
+<li>初始化. new(A), A{a:1, b:2}, A{1,2}</li>
+<li>匿名组合. 类型和接口都可以通过匿名组合来实现继承</li>
+<li>非侵入式接口.
+<ul class="org-ul">
+<li>对象实例可以赋值给接口</li>
+<li>一个接口可以赋值给另外一个接口</li>
+<li>func (a A)&#x2026;自动会实现func (a *A)&#x2026;</li>
+</ul></li>
+<li>类型/接口查询. 值是否实现某个接口`v.(IReader)`或是什么类型`v.(type)`</li>
+</ul>
+
+<p>
+并发编程
+</p>
+<ul class="org-ul">
+<li>goroutine go协程 see `libtask`
+<ul class="org-ul">
+<li>使用CPU数量 runtime.GOMAXPROCS()</li>
+<li>主动yield runtime.GoSched()</li>
+</ul></li>
+<li>并发通信
+<ul class="org-ul">
+<li>基于消息传递 channel `chan type`
+<ul class="org-ul">
+<li>单向写入channel `chan&lt;- type`</li>
+<li>单向读出channel `&lt;-chan type`</li>
+<li>通过make(chan type [,bufsize])来创建</li>
+</ul></li>
+<li>基于内存共享 sync.* 同步机制</li>
+</ul></li>
+<li>select 有效轮询各个channels状态
+<ul class="org-ul">
+<li>select本身没有提供timeout机制</li>
+<li>workaround办法是启动另外一个检测超时的goroutine</li>
+</ul></li>
+</ul>
+
+<p>
+工程管理
+</p>
+<ul class="org-ul">
+<li>目录组织. src/pkg/bin</li>
+<li>集成工具. just `go`</li>
+<li>代码风格. see `go fmt`</li>
+<li>远程import支持. see `go get`</li>
+<li>内置单元测试和性能测试</li>
+<li>camelCase style. 只暴露首字母大写的变量.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- DISQUS BEGIN --><div id="disqus_thread"></div><script type="text/javascript">/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * *//* required: replace example with your forum shortname  */var disqus_shortname = 'dirlt';var disqus_identifier = 'go.html';var disqus_title = 'go.html';var disqus_url = 'http://dirtysalt.info/go.html';/* * * DON'T EDIT BELOW THIS LINE * * */(function() {var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);})();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><!-- DISQUS END --></body>
+</html>

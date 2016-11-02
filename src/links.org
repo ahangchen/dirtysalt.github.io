@@ -1,0 +1,72 @@
+#+title: links
+-----
+Home:
+- Leslie Lamport. http://research.microsoft.com/en-us/um/people/lamport/pubs/pubs.html
+- James Hamilton. http://mvdirona.com/jrh/work/
+- Jeff Dean. http://research.google.com/people/jeff/
+- Rob Pike. http://www.herpolhode.com/rob/
+- Russ Cox. https://swtch.com/~rsc/
+- Eric S. Raymond. http://www.catb.org/esr/
+- Matt Welsh. http://www.mdw.la/
+- Joe Armstrong. http://joearms.github.io/
+- Don Knuth. http://www-cs-faculty.stanford.edu/~uno/
+- Robert Morris. http://pdos.csail.mit.edu/~rtm/
+- Matei Zaharia. http://people.csail.mit.edu/matei/ [[http://www.cs.berkeley.edu/~matei/][#]] Spark
+- R. Kent Dybvig. http://www.cs.indiana.edu/~dyb/ # Scheme
+- 陈寅恪 http://en.wikipedia.org/wiki/Chen_Yinke
+  - [[file:./reply-to-science-institution.org][对科学院的答复]]
+  - http://www.tudou.com/listplay/y14UtaOL_To/fqsa-SxCecE.html
+  - http://www.tudou.com/listplay/y14UtaOL_To/fqSv4ytJFsA.html
+- 蔡元培 http://en.wikipedia.org/wiki/Cai_Yuanpei
+  - http://www.tudou.com/listplay/y14UtaOL_To/Q1xkcXDXaAo.html
+  - http://www.tudou.com/listplay/y14UtaOL_To/--wU0Hiroig.html
+
+-----
+Blog:
+- [[file:blog.org][My blog]] - [[file:about-me.org][About me]]
+- jwz. [[http://www.jwz.org/blog/][blog]] [[http://www.jwz.org/doc/][doc]]
+#+BEGIN_QUOTE
+"you can divide our industry into two kinds of people: those who want to go work for a company to make it successful, and those who want to go work for a successful company. " - [[http://www.jwz.org/gruntle/nomo.html][jwz]])
+#+END_QUOTE
+
+- Werner Vogels. http://www.allthingsdistributed.com/
+- Nathan Marz. http://nathanmarz.com/ # Storm
+- Matt Might. http://matt.might.net/ # Compiler, FP
+- Jeff Preshing. http://www.preshing.com/ # C++
+- Andrej Karpathy. http://karpathy.github.io/ # Neural Network.
+- Herb Sutter. http://www.gotw.ca/ # C++
+- 陈皓 http://coolshell.cn/
+- Peter Hintjens. http://hintjens.com/
+- IT Hare on Soft.ware : http://ithare.com/ # C++, High Performance
+- 王垠 http://www.yinwang.org/
+- Colah's blog : http://colah.github.io/archive.html # neural nets
+- Bret Victor : http://worrydream.com/#!/TheFutureOfProgramming # Programming, Designer.
+
+-----
+Site:
+- Mechanical Sympathy : http://mechanical-sympathy.blogspot.co.at/ # Concurrency, JVM, CPU, Memory
+- Paper Trail : http://the-paper-trail.org/blog/
+- Building Scalable Systems : http://scalingsystems.com/
+- Systems We Make : http://www.systemswemake.com/
+- 37Signals : http://signalvnoise.com/
+- Percona : http://www.mysqlperformanceblog.com/ # MySQL
+- DBMS 2 : : http://www.dbms2.com/ # Database
+- Small Datum : http://smalldatum.blogspot.com/
+
+-----
+Conf:
+- stangeloop http://www.thestrangeloop.com/about.html
+- ICFP International Conference on Functional Programming
+- ICML International Conference on Machine Learning
+- IJCAI International Joint Conference on Artificial Intelligence
+- PLDI ACM-SIGPLAN Conference on Programming Language Design & Implementation
+- SOSP ACM SIGOPS Symposium on Operating Systems Principles http://sigops.org/sosp/
+- SOSP History Day http://sigops.org/sosp/sosp15/history/index.html
+- SIGKDD ACM International Conference on Knowledge Discovery and Data Mining
+- VLDB International Conference on Very Large Databases
+
+-----
+Archive:
+- The Best of 2012 | Dr Dobb's : http://www.drdobbs.com/architecture-and-design/the-best-of-2012/240145121
+- The Best of 2013 | Dr Dobb's : http://www.drdobbs.com/architecture-and-design/the-best-of-2013/240164956
+- High Scalability - All Time Favorites : http://highscalability.com/all-time-favorites/

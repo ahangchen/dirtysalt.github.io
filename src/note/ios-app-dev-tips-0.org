@@ -1,0 +1,22 @@
+#+title: iOS App Dev Tips-0
+
+如果table view didSelectPath没有被调用的话，那么检查一下table view是否允许被select.(属性里面Selection可能被设置成了None)  [[http://stackoverflow.com/questions/255927/didselectrowatindexpath-not-being-called][link]]
+
+[[http://www.appcoda.com/customize-table-view-cells-for-uitableview/][创建自定义TableViewCell]]
+
+同时使用TabBar和TableView时候，tableview最下面一个cell会被TabBar挡住。需要将TabBar的属性Bottom Bar设置成为Opaque Tab Bar. [[http://stackoverflow.com/questions/19173630/ios-7-custom-tableview-is-under-tabbar][link]]
+
+对外默认不能发起HTTP这种非加密请求，除非显式地将这些域名添加到白名单 [[http://stackoverflow.com/questions/32631184/the-resource-could-not-be-loaded-because-the-app-transport-security-policy-requi][link]]
+#+BEGIN_SRC XML
+<key>NSAppTransportSecurity</key>
+<dict>  
+  <key>NSExceptionDomains</key>
+  <dict>
+    <key>domain.com</key>
+    <dict>
+      <key>NSExceptionAllowsInsecureHTTPLoads</key><true/>
+      <key>NSIncludesSubdomains</key><true/>
+    </dict>
+  </dict>
+</dict>
+#+END_SRC

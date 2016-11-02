@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thinking Clearly about Performance</title>
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="dirtysalt" />
+<link rel="shortcut icon" href="http://dirtysalt.info/css/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="./css/site.css" />
+</head>
+<body>
+<div id="content">
+<h1 class="title">Thinking Clearly about Performance</h1>
+<ul class="org-ul">
+<li><a href="http://queue.acm.org/detail.cfm?id=1854041">http://queue.acm.org/detail.cfm?id=1854041</a></li>
+<li><a href="http://method-r.com/papers/file/44-thinking-clearly-about-performance">http://method-r.com/papers/file/44-thinking-clearly-about-performance</a></li>
+</ul>
+
+<p>
+#note: 作者强调最多的就是分析性能时应该考虑单个execution执行效果而不是仅仅是看系统整体的执行效果
+</p>
+
+<p>
+performance is not an attribute of a system. performance is an attribute of each individual experience with a system. (percentile specification)
+</p>
+<ul class="org-ul">
+<li>you will catch more problems if you just try.</li>
+<li>you will never catch them all.</li>
+<li>you can't know how your applicaiton will perform until you go live.</li>
+<li>you need to write your application so it's easy to fix performance in production. # 在应用中嵌入profile功能</li>
+</ul>
+
+<p>
+when obviously different experiences yield the same measurement, you're measuring the wrong thing.
+</p>
+
+<p>
+skew is what fouls your ability to predict results. # 比如函数A总共花费500s, 一共调用100次。但是其中90次一共花费90s，剩余10次花费410s.
+</p>
+
+<p>
+two types of waiting:
+</p>
+<ul class="org-ul">
+<li>queueing delay. time spent waiting in a queue for access to a shared resource.</li>
+<li>coherency delay. time spent communicating and coordinating access to a shared resource.</li>
+</ul>
+
+<p>
+<img src="./images/tcap-perf.png" alt="tcap-perf.png" /> <img src="./images/tcap-qdelay.png" alt="tcap-qdelay.png" />
+</p>
+
+
+<div class="figure">
+<p><img src="./images/tcap-cdelay.png" alt="tcap-cdelay.png" />
+</p>
+</div>
+</div>
+<!-- DISQUS BEGIN --><div id="disqus_thread"></div><script type="text/javascript">/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * *//* required: replace example with your forum shortname  */var disqus_shortname = 'dirlt';var disqus_identifier = 'thinking-clearly-about-performance.html';var disqus_title = 'thinking-clearly-about-performance.html';var disqus_url = 'http://dirtysalt.info/thinking-clearly-about-performance.html';/* * * DON'T EDIT BELOW THIS LINE * * */(function() {var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);})();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><!-- DISQUS END --></body>
+</html>

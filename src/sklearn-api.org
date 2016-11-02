@@ -1,0 +1,232 @@
+#+title: sklearn API
+
+** sklearn.Base
+estimator base class, 包括4类扩展：
+- classifier
+- cluster
+- regressor
+- transformer
+
+基本操作有：
+- set/get_params 设置参数
+- score 模型评价分数(分类器用mean acc, 回归器用R^2)
+- fit/predict/transform 训练，预测和转换
+
+** sklearn.dummy
+内部使用一些简单规则的estimator. 这个估计连benchmark都不用上，可能用于接口测试。
+
+** sklearn.utils
+- resample. 重取样(包括有无放回两种)
+- shuffle. random.shuffle
+
+** sklearn.datasets
+- loaders. 下载一些公共公开数据，load进来并且格式化
+- generators. 按照一些规则去生成测试数据
+
+** sklearn.exceptions
+- NotFittedError. estimator没有fit就开始使用
+- ChangedBehaviorWarning. 警告用户有内部行为改变
+- ConvergenceWarning. 捕捉到convergence问题
+- DataConversionWarning. 警告用户代码里面有隐式数据转变
+- DataDimensionalityWarning. 捕捉到数据维度问题
+- EfficiencyWarining. 警告没有使用高效的实现
+- FitFailedWarning. fit操作执行失败
+- NonBLASDotWarning. dot操作执行时没有使用BLAS
+- UndefinedMetricWarining. 使用无效的metric.
+
+** sklearn.preprocessing
+- Binarizer 二值化
+- FunctionTransformer 函数处理
+- Imputer 处理缺省值
+- KernelCenterer
+- LabelBinarizer 把class label映射成为二值向量
+- LabelEncoder 把class label映射到[0, n_classes-1]
+- MultiLabelBinarizer
+- MaxAbsScaler =x/max(abs(x))=
+- MinMaxScaler =X_std * (max - min) + min=
+- Normalizer 归一化
+- OneHotEncoder one-hot编码
+- PolynomialFeatures 多项式feature.
+- RobustScaler
+- StandardScaler remoing the mean and scaling to unit variance.
+- add_dummy_feature 在features前面加一列 /but what's for?/
+
+** sklearn.pipeline
+- Pipeline
+
+pipeline由n个estimators组成，前面n-1个estimators要求实现fit/transform, 最后一个estimator实现fit/predict.
+每个estimator都是命名, 每个estimator的参数可以通过 =<name>__<param>= 来分别设置。这个pipeline本身也是一个estimator,
+然后可以作为一个整体来做训练以及参数搜索等工作。
+
+- FeatureUnion
+
+feature_union同样有n个estimator组成，这些estimator都实现transform功能。每个estimator都会对data做fit/transform工作，
+然后将最后得到的features连接在一起，参数设置和pipeline一样。最后这些feature的名称是 =<estimator_name>__<feature_name>=.
+
+** sklearn.metrics
+=scorer= 对象用来计算评价分数，基本接口是 =func(y_true, y_pred, **kwargs)=. sklearn内置了许多常用的scorer.
+
+*classification*
+- accuracy_score
+- auc
+- average_precision_score
+- brier_score_loss
+- classification_report
+- cohen_kappa_score
+- confusion_matrix
+- f1_score
+- fbeta_score
+- hamming_loss
+- hinge_loss
+- jaccard_similarity_score
+- log_loss
+- mattews_corrcoef
+- precision_recall_curve
+- precision_recall_fscore_support
+- precision_score
+- recall_score
+- roc_auc_score
+- roc_curve
+- zero_one_loss
+
+*regression*
+- explained_variance_score
+- mean_absolute_error
+- mean_squared_error
+- media_absolute_error
+- r2_score
+
+*multilabel ranking*
+
+*clustering*
+
+*biclustering*
+
+*pairwise*
+
+** sklearn.model_selection
+- Splitter 将数据分为train和cv data set.
+
+- Hyper-params optimizer 参数空间优化器. 提供cv参数表明如何切分出cv data set.
+ - GridSearchCV
+ - RadomizedSearchCV
+
+- model validation 模型验证
+ - cross_val_score
+ - cross_val_predict
+ - permutation_test_score
+ - learning_curve
+ - validation_curve
+
+learning_curve凸显出随着训练样本的增加，train和cv分值的曲线变化；validation_curve展现的是随着参数变化，train和cv分值的曲线变化。文档里面给出了示例代码来绘制两条曲线。
+
+** sklearn.feature_extraction
+下面都是一些和feature处理相关的类
+
+General:
+- DictVectorizer 将dict变为feature. 字典里面所有的key分配一个unique feature id.
+- FeatureHasher 和上面做的工作一样，只不过通过hash(key)来分配feature id. 字典大的时候可以节省内存
+
+Images:
+
+Text:
+- CountVectorizer
+- HashingVectorizer
+- TfidfTransformer
+- TfidfVectorizer
+
+** sklearn.feature_selection
+univariate filter selection methods. 每个feature都是独立计算出score的.
+通用接口是 =GenericUnivariateSelect=
+- SelectPercentile
+- SelectKBest
+- SelectFpr
+- SelectFdr
+- SelectFromModel 根据estimator计算出的feature weight来做筛选
+- SeelctFwe
+
+recursive feature elimination algorithm(RFE).
+- RFE
+- RFECV 带有cross-validation的RFE
+
+还有一些和特征选择相关的辅助函数/类
+- VarianceThreshold 根据feature variance做筛选.
+- chi2 筛除独立于class/label的features.
+- f_classif ANOVA F-value
+- f_regression F-value for regression
+- mutual_info_classif
+- mutual_info_regression
+
+** sklearn.multiclass
+提供了一些用于multilclass和multilabel分类的算法实现
+- one-vs-the-rest / one-vs-all
+- one-vs-one
+- error correcting output codes
+
+#+BEGIN_QUOTE
+The estimators provided in this module are meta-estimators: they require a base estimator to be provided in their constructor. For example, it is possible to use these estimators to turn a binary classifier or a regressor into a multiclass classifier. It is also possible to use these estimators with multiclass estimators in the hope that their accuracy or runtime performance improves.
+#+END_QUOTE
+
+这些都是只是meta-estimators, 用户需要提供具体的estimator. 利用这些算法实现可以将二分类变为多分类，也可以将本身就是多分类的estimator提高准确率。
+
+** sklearn.multioutput
+- MultiOutputRegressor
+- MultiOutputClassifier
+
+** sklearn.linear_model
+- Ridge/Classifier
+- LogisticRegression
+- SDGClassifier/Regressor
+
+** sklearn.svm
+- SVC/SVR
+- LinearSVC/SVR
+
+** sklearn.tree
+- DecisionTreeClassifier/Regressor
+- ExtraTreeClassifier/Regressor
+- export_graphviz # 绘制决策树
+
+** sklearn.ensemble
+- AdaBoostClassifier/Regressor
+- BaggingClassifier/Regressor
+- ExtraTreesClassifier/Regressor
+- GradientBoostingClassifier/Regressor
+- RandomForestClassifier/Regressor
+- RandomTreesEmbedding
+
+** sklearn.naive_bayes
+- GaussianNB
+- MultinomialNB # =for occurrences=
+- BernoulliNB # =for binary=
+
+** sklearn.neighhors
+- NearestNeighbors
+- KNeighborsClassifier/Regressor
+- RadiusNeighborsClassifier/Regressor
+- NearestCentroid
+- Ball/KDTree, LSHForest
+- DistanceMetrid # 计算两点距离
+- KernelDensity
+- kneighbors/radius_neighbors_graph
+
+** CUT ME HERE
+the followings are some parts I feel hard to understand, so maybe combe back later.
+
+** sklearn.cluster
+** sklearn.covariance
+** sklearn.decomposition
+** sklearn.gaussian_process
+** sklearn.isotonic
+** sklearn.kernel_approximation
+** sklearn.kernel_ridge
+** sklearn.discriminant_analysis
+** sklearn.manifold
+** sklearn.mixture
+** sklearn.neural_network
+** sklearn.calibration
+
+** sklearn.cross_decomposition
+** sklearn.random_projection
+
+** sklearn.semi_supervised

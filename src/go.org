@@ -1,0 +1,65 @@
+#+title: Go
+- [[http://golang.org/][The Go Programming Language]]
+- [[http://mmcgrana.github.com/2012/10/introducing-go-by-example.html][Introducing Go by Example]]
+
+** Go语言编程
+by 许式伟，吕桂华
+
+顺序编程
+- 有限的类型推导
+  - `var k = "hello"` or `k := "hello"`
+  - 不会对函数返回值类型进行推导
+- 不定参数 `args ...int` 可以认为是数组切片类型 `args []int`
+- `range`用来遍历数组, 切片, 以及字典.
+- 取消`while`, 只保留`for`.
+  - for <init>; <loop>; <pred> { \n ... }
+  - for <loop> { \n ... }
+  - for { \n ... }
+- 多重赋值, 多值返回, 匿名函数与闭包
+- 错误处理. error接口
+- RAII解决方案. defer
+- 异常传播. panic + recover
+  - panic(value). 触发异常并携带value
+  - if r := recover() ; r != nil 捕获可能的异常并处理.
+
+类型系统
+- 值语义 vs. 引用语义
+  - 大部分cases都是值语义
+  - 看起来像引用语义的有
+    1. 数组切片
+    2. map
+    3. channel
+    4. interface
+  - 这些"引用语义"类型内部实现都是维护指针
+- 初始化. new(A), A{a:1, b:2}, A{1,2}
+- 匿名组合. 类型和接口都可以通过匿名组合来实现继承
+- 非侵入式接口.
+  - 对象实例可以赋值给接口
+  - 一个接口可以赋值给另外一个接口
+  - func (a A)...自动会实现func (a *A)...
+- 类型/接口查询. 值是否实现某个接口`v.(IReader)`或是什么类型`v.(type)`
+
+并发编程
+- goroutine go协程 see `libtask`
+  - 使用CPU数量 runtime.GOMAXPROCS()
+  - 主动yield runtime.GoSched()
+- 并发通信
+  - 基于消息传递 channel `chan type`
+    - 单向写入channel `chan<- type`
+    - 单向读出channel `<-chan type`
+    - 通过make(chan type [,bufsize])来创建
+  - 基于内存共享 sync.* 同步机制
+- select 有效轮询各个channels状态
+  - select本身没有提供timeout机制
+  - workaround办法是启动另外一个检测超时的goroutine
+
+工程管理
+- 目录组织. src/pkg/bin
+- 集成工具. just `go`
+- 代码风格. see `go fmt`
+- 远程import支持. see `go get`
+- 内置单元测试和性能测试
+- camelCase style. 只暴露首字母大写的变量.
+
+
+

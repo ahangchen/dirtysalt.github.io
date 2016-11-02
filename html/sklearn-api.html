@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title>sklearn API</title>
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="dirtysalt" />
+<link rel="shortcut icon" href="http://dirtysalt.info/css/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="./css/site.css" />
+</head>
+<body>
+<div id="content">
+<h1 class="title">sklearn API</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline1">1. sklearn.Base</a></li>
+<li><a href="#orgheadline2">2. sklearn.dummy</a></li>
+<li><a href="#orgheadline3">3. sklearn.utils</a></li>
+<li><a href="#orgheadline4">4. sklearn.datasets</a></li>
+<li><a href="#orgheadline5">5. sklearn.exceptions</a></li>
+<li><a href="#orgheadline6">6. sklearn.preprocessing</a></li>
+<li><a href="#orgheadline7">7. sklearn.pipeline</a></li>
+<li><a href="#orgheadline8">8. sklearn.metrics</a></li>
+<li><a href="#orgheadline9">9. sklearn.model_selection</a></li>
+<li><a href="#orgheadline10">10. sklearn.feature_extraction</a></li>
+<li><a href="#orgheadline11">11. sklearn.feature_selection</a></li>
+<li><a href="#orgheadline12">12. sklearn.multiclass</a></li>
+<li><a href="#orgheadline13">13. sklearn.multioutput</a></li>
+<li><a href="#orgheadline14">14. sklearn.linear_model</a></li>
+<li><a href="#orgheadline15">15. sklearn.svm</a></li>
+<li><a href="#orgheadline16">16. sklearn.tree</a></li>
+<li><a href="#orgheadline17">17. sklearn.ensemble</a></li>
+<li><a href="#orgheadline18">18. sklearn.naive_bayes</a></li>
+<li><a href="#orgheadline19">19. sklearn.neighhors</a></li>
+<li><a href="#orgheadline20">20. CUT ME HERE</a></li>
+<li><a href="#orgheadline21">21. sklearn.cluster</a></li>
+<li><a href="#orgheadline22">22. sklearn.covariance</a></li>
+<li><a href="#orgheadline23">23. sklearn.decomposition</a></li>
+<li><a href="#orgheadline24">24. sklearn.gaussian_process</a></li>
+<li><a href="#orgheadline25">25. sklearn.isotonic</a></li>
+<li><a href="#orgheadline26">26. sklearn.kernel_approximation</a></li>
+<li><a href="#orgheadline27">27. sklearn.kernel_ridge</a></li>
+<li><a href="#orgheadline28">28. sklearn.discriminant_analysis</a></li>
+<li><a href="#orgheadline29">29. sklearn.manifold</a></li>
+<li><a href="#orgheadline30">30. sklearn.mixture</a></li>
+<li><a href="#orgheadline31">31. sklearn.neural_network</a></li>
+<li><a href="#orgheadline32">32. sklearn.calibration</a></li>
+<li><a href="#orgheadline33">33. sklearn.cross_decomposition</a></li>
+<li><a href="#orgheadline34">34. sklearn.random_projection</a></li>
+<li><a href="#orgheadline35">35. sklearn.semi_supervised</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1"><span class="section-number-2">1</span> sklearn.Base</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+estimator base class, 包括4类扩展：
+</p>
+<ul class="org-ul">
+<li>classifier</li>
+<li>cluster</li>
+<li>regressor</li>
+<li>transformer</li>
+</ul>
+
+<p>
+基本操作有：
+</p>
+<ul class="org-ul">
+<li>set/get_params 设置参数</li>
+<li>score 模型评价分数(分类器用mean acc, 回归器用R^2)</li>
+<li>fit/predict/transform 训练，预测和转换</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline2" class="outline-2">
+<h2 id="orgheadline2"><span class="section-number-2">2</span> sklearn.dummy</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+内部使用一些简单规则的estimator. 这个估计连benchmark都不用上，可能用于接口测试。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline3" class="outline-2">
+<h2 id="orgheadline3"><span class="section-number-2">3</span> sklearn.utils</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>resample. 重取样(包括有无放回两种)</li>
+<li>shuffle. random.shuffle</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline4" class="outline-2">
+<h2 id="orgheadline4"><span class="section-number-2">4</span> sklearn.datasets</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>loaders. 下载一些公共公开数据，load进来并且格式化</li>
+<li>generators. 按照一些规则去生成测试数据</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline5" class="outline-2">
+<h2 id="orgheadline5"><span class="section-number-2">5</span> sklearn.exceptions</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>NotFittedError. estimator没有fit就开始使用</li>
+<li>ChangedBehaviorWarning. 警告用户有内部行为改变</li>
+<li>ConvergenceWarning. 捕捉到convergence问题</li>
+<li>DataConversionWarning. 警告用户代码里面有隐式数据转变</li>
+<li>DataDimensionalityWarning. 捕捉到数据维度问题</li>
+<li>EfficiencyWarining. 警告没有使用高效的实现</li>
+<li>FitFailedWarning. fit操作执行失败</li>
+<li>NonBLASDotWarning. dot操作执行时没有使用BLAS</li>
+<li>UndefinedMetricWarining. 使用无效的metric.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline6" class="outline-2">
+<h2 id="orgheadline6"><span class="section-number-2">6</span> sklearn.preprocessing</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>Binarizer 二值化</li>
+<li>FunctionTransformer 函数处理</li>
+<li>Imputer 处理缺省值</li>
+<li>KernelCenterer</li>
+<li>LabelBinarizer 把class label映射成为二值向量</li>
+<li>LabelEncoder 把class label映射到[0, n_classes-1]</li>
+<li>MultiLabelBinarizer</li>
+<li>MaxAbsScaler <code>x/max(abs(x))</code></li>
+<li>MinMaxScaler <code>X_std * (max - min) + min</code></li>
+<li>Normalizer 归一化</li>
+<li>OneHotEncoder one-hot编码</li>
+<li>PolynomialFeatures 多项式feature.</li>
+<li>RobustScaler</li>
+<li>StandardScaler remoing the mean and scaling to unit variance.</li>
+<li>add_dummy_feature 在features前面加一列 <i>but what's for?</i></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline7" class="outline-2">
+<h2 id="orgheadline7"><span class="section-number-2">7</span> sklearn.pipeline</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>Pipeline</li>
+</ul>
+
+<p>
+pipeline由n个estimators组成，前面n-1个estimators要求实现fit/transform, 最后一个estimator实现fit/predict.
+每个estimator都是命名, 每个estimator的参数可以通过 <code>&lt;name&gt;__&lt;param&gt;</code> 来分别设置。这个pipeline本身也是一个estimator,
+然后可以作为一个整体来做训练以及参数搜索等工作。
+</p>
+
+<ul class="org-ul">
+<li>FeatureUnion</li>
+</ul>
+
+<p>
+feature_union同样有n个estimator组成，这些estimator都实现transform功能。每个estimator都会对data做fit/transform工作，
+然后将最后得到的features连接在一起，参数设置和pipeline一样。最后这些feature的名称是 <code>&lt;estimator_name&gt;__&lt;feature_name&gt;</code>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline8" class="outline-2">
+<h2 id="orgheadline8"><span class="section-number-2">8</span> sklearn.metrics</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+<code>scorer</code> 对象用来计算评价分数，基本接口是 <code>func(y_true, y_pred, **kwargs)</code>. sklearn内置了许多常用的scorer.
+</p>
+
+<p>
+<b>classification</b>
+</p>
+<ul class="org-ul">
+<li>accuracy_score</li>
+<li>auc</li>
+<li>average_precision_score</li>
+<li>brier_score_loss</li>
+<li>classification_report</li>
+<li>cohen_kappa_score</li>
+<li>confusion_matrix</li>
+<li>f1_score</li>
+<li>fbeta_score</li>
+<li>hamming_loss</li>
+<li>hinge_loss</li>
+<li>jaccard_similarity_score</li>
+<li>log_loss</li>
+<li>mattews_corrcoef</li>
+<li>precision_recall_curve</li>
+<li>precision_recall_fscore_support</li>
+<li>precision_score</li>
+<li>recall_score</li>
+<li>roc_auc_score</li>
+<li>roc_curve</li>
+<li>zero_one_loss</li>
+</ul>
+
+<p>
+<b>regression</b>
+</p>
+<ul class="org-ul">
+<li>explained_variance_score</li>
+<li>mean_absolute_error</li>
+<li>mean_squared_error</li>
+<li>media_absolute_error</li>
+<li>r2_score</li>
+</ul>
+
+<p>
+<b>multilabel ranking</b>
+</p>
+
+<p>
+<b>clustering</b>
+</p>
+
+<p>
+<b>biclustering</b>
+</p>
+
+<p>
+<b>pairwise</b>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline9" class="outline-2">
+<h2 id="orgheadline9"><span class="section-number-2">9</span> sklearn.model_selection</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li>Splitter 将数据分为train和cv data set.</li>
+
+<li>Hyper-params optimizer 参数空间优化器. 提供cv参数表明如何切分出cv data set.
+<ul class="org-ul">
+<li>GridSearchCV</li>
+<li>RadomizedSearchCV</li>
+</ul></li>
+
+<li>model validation 模型验证
+<ul class="org-ul">
+<li>cross_val_score</li>
+<li>cross_val_predict</li>
+<li>permutation_test_score</li>
+<li>learning_curve</li>
+<li>validation_curve</li>
+</ul></li>
+</ul>
+
+<p>
+learning_curve凸显出随着训练样本的增加，train和cv分值的曲线变化；validation_curve展现的是随着参数变化，train和cv分值的曲线变化。文档里面给出了示例代码来绘制两条曲线。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline10" class="outline-2">
+<h2 id="orgheadline10"><span class="section-number-2">10</span> sklearn.feature_extraction</h2>
+<div class="outline-text-2" id="text-10">
+<p>
+下面都是一些和feature处理相关的类
+</p>
+
+<p>
+General:
+</p>
+<ul class="org-ul">
+<li>DictVectorizer 将dict变为feature. 字典里面所有的key分配一个unique feature id.</li>
+<li>FeatureHasher 和上面做的工作一样，只不过通过hash(key)来分配feature id. 字典大的时候可以节省内存</li>
+</ul>
+
+<p>
+Images:
+</p>
+
+<p>
+Text:
+</p>
+<ul class="org-ul">
+<li>CountVectorizer</li>
+<li>HashingVectorizer</li>
+<li>TfidfTransformer</li>
+<li>TfidfVectorizer</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline11" class="outline-2">
+<h2 id="orgheadline11"><span class="section-number-2">11</span> sklearn.feature_selection</h2>
+<div class="outline-text-2" id="text-11">
+<p>
+univariate filter selection methods. 每个feature都是独立计算出score的.
+通用接口是 <code>GenericUnivariateSelect</code>
+</p>
+<ul class="org-ul">
+<li>SelectPercentile</li>
+<li>SelectKBest</li>
+<li>SelectFpr</li>
+<li>SelectFdr</li>
+<li>SelectFromModel 根据estimator计算出的feature weight来做筛选</li>
+<li>SeelctFwe</li>
+</ul>
+
+<p>
+recursive feature elimination algorithm(RFE).
+</p>
+<ul class="org-ul">
+<li>RFE</li>
+<li>RFECV 带有cross-validation的RFE</li>
+</ul>
+
+<p>
+还有一些和特征选择相关的辅助函数/类
+</p>
+<ul class="org-ul">
+<li>VarianceThreshold 根据feature variance做筛选.</li>
+<li>chi2 筛除独立于class/label的features.</li>
+<li>f_classif ANOVA F-value</li>
+<li>f_regression F-value for regression</li>
+<li>mutual_info_classif</li>
+<li>mutual_info_regression</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline12" class="outline-2">
+<h2 id="orgheadline12"><span class="section-number-2">12</span> sklearn.multiclass</h2>
+<div class="outline-text-2" id="text-12">
+<p>
+提供了一些用于multilclass和multilabel分类的算法实现
+</p>
+<ul class="org-ul">
+<li>one-vs-the-rest / one-vs-all</li>
+<li>one-vs-one</li>
+<li>error correcting output codes</li>
+</ul>
+
+<blockquote>
+<p>
+The estimators provided in this module are meta-estimators: they require a base estimator to be provided in their constructor. For example, it is possible to use these estimators to turn a binary classifier or a regressor into a multiclass classifier. It is also possible to use these estimators with multiclass estimators in the hope that their accuracy or runtime performance improves.
+</p>
+</blockquote>
+
+<p>
+这些都是只是meta-estimators, 用户需要提供具体的estimator. 利用这些算法实现可以将二分类变为多分类，也可以将本身就是多分类的estimator提高准确率。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline13" class="outline-2">
+<h2 id="orgheadline13"><span class="section-number-2">13</span> sklearn.multioutput</h2>
+<div class="outline-text-2" id="text-13">
+<ul class="org-ul">
+<li>MultiOutputRegressor</li>
+<li>MultiOutputClassifier</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline14" class="outline-2">
+<h2 id="orgheadline14"><span class="section-number-2">14</span> sklearn.linear_model</h2>
+<div class="outline-text-2" id="text-14">
+<ul class="org-ul">
+<li>Ridge/Classifier</li>
+<li>LogisticRegression</li>
+<li>SDGClassifier/Regressor</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline15" class="outline-2">
+<h2 id="orgheadline15"><span class="section-number-2">15</span> sklearn.svm</h2>
+<div class="outline-text-2" id="text-15">
+<ul class="org-ul">
+<li>SVC/SVR</li>
+<li>LinearSVC/SVR</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline16" class="outline-2">
+<h2 id="orgheadline16"><span class="section-number-2">16</span> sklearn.tree</h2>
+<div class="outline-text-2" id="text-16">
+<ul class="org-ul">
+<li>DecisionTreeClassifier/Regressor</li>
+<li>ExtraTreeClassifier/Regressor</li>
+<li>export_graphviz # 绘制决策树</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline17" class="outline-2">
+<h2 id="orgheadline17"><span class="section-number-2">17</span> sklearn.ensemble</h2>
+<div class="outline-text-2" id="text-17">
+<ul class="org-ul">
+<li>AdaBoostClassifier/Regressor</li>
+<li>BaggingClassifier/Regressor</li>
+<li>ExtraTreesClassifier/Regressor</li>
+<li>GradientBoostingClassifier/Regressor</li>
+<li>RandomForestClassifier/Regressor</li>
+<li>RandomTreesEmbedding</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline18" class="outline-2">
+<h2 id="orgheadline18"><span class="section-number-2">18</span> sklearn.naive_bayes</h2>
+<div class="outline-text-2" id="text-18">
+<ul class="org-ul">
+<li>GaussianNB</li>
+<li>MultinomialNB # <code>for occurrences</code></li>
+<li>BernoulliNB # <code>for binary</code></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline19" class="outline-2">
+<h2 id="orgheadline19"><span class="section-number-2">19</span> sklearn.neighhors</h2>
+<div class="outline-text-2" id="text-19">
+<ul class="org-ul">
+<li>NearestNeighbors</li>
+<li>KNeighborsClassifier/Regressor</li>
+<li>RadiusNeighborsClassifier/Regressor</li>
+<li>NearestCentroid</li>
+<li>Ball/KDTree, LSHForest</li>
+<li>DistanceMetrid # 计算两点距离</li>
+<li>KernelDensity</li>
+<li>kneighbors/radius_neighbors_graph</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline20" class="outline-2">
+<h2 id="orgheadline20"><span class="section-number-2">20</span> CUT ME HERE</h2>
+<div class="outline-text-2" id="text-20">
+<p>
+the followings are some parts I feel hard to understand, so maybe combe back later.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline21" class="outline-2">
+<h2 id="orgheadline21"><span class="section-number-2">21</span> sklearn.cluster</h2>
+</div>
+<div id="outline-container-orgheadline22" class="outline-2">
+<h2 id="orgheadline22"><span class="section-number-2">22</span> sklearn.covariance</h2>
+</div>
+<div id="outline-container-orgheadline23" class="outline-2">
+<h2 id="orgheadline23"><span class="section-number-2">23</span> sklearn.decomposition</h2>
+</div>
+<div id="outline-container-orgheadline24" class="outline-2">
+<h2 id="orgheadline24"><span class="section-number-2">24</span> sklearn.gaussian_process</h2>
+</div>
+<div id="outline-container-orgheadline25" class="outline-2">
+<h2 id="orgheadline25"><span class="section-number-2">25</span> sklearn.isotonic</h2>
+</div>
+<div id="outline-container-orgheadline26" class="outline-2">
+<h2 id="orgheadline26"><span class="section-number-2">26</span> sklearn.kernel_approximation</h2>
+</div>
+<div id="outline-container-orgheadline27" class="outline-2">
+<h2 id="orgheadline27"><span class="section-number-2">27</span> sklearn.kernel_ridge</h2>
+</div>
+<div id="outline-container-orgheadline28" class="outline-2">
+<h2 id="orgheadline28"><span class="section-number-2">28</span> sklearn.discriminant_analysis</h2>
+</div>
+<div id="outline-container-orgheadline29" class="outline-2">
+<h2 id="orgheadline29"><span class="section-number-2">29</span> sklearn.manifold</h2>
+</div>
+<div id="outline-container-orgheadline30" class="outline-2">
+<h2 id="orgheadline30"><span class="section-number-2">30</span> sklearn.mixture</h2>
+</div>
+<div id="outline-container-orgheadline31" class="outline-2">
+<h2 id="orgheadline31"><span class="section-number-2">31</span> sklearn.neural_network</h2>
+</div>
+<div id="outline-container-orgheadline32" class="outline-2">
+<h2 id="orgheadline32"><span class="section-number-2">32</span> sklearn.calibration</h2>
+</div>
+
+<div id="outline-container-orgheadline33" class="outline-2">
+<h2 id="orgheadline33"><span class="section-number-2">33</span> sklearn.cross_decomposition</h2>
+</div>
+<div id="outline-container-orgheadline34" class="outline-2">
+<h2 id="orgheadline34"><span class="section-number-2">34</span> sklearn.random_projection</h2>
+</div>
+
+<div id="outline-container-orgheadline35" class="outline-2">
+<h2 id="orgheadline35"><span class="section-number-2">35</span> sklearn.semi_supervised</h2>
+</div>
+</div>
+<!-- DISQUS BEGIN --><div id="disqus_thread"></div><script type="text/javascript">/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * *//* required: replace example with your forum shortname  */var disqus_shortname = 'dirlt';var disqus_identifier = 'sklearn-api.html';var disqus_title = 'sklearn-api.html';var disqus_url = 'http://dirtysalt.info/sklearn-api.html';/* * * DON'T EDIT BELOW THIS LINE * * */(function() {var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);})();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><!-- DISQUS END --></body>
+</html>
