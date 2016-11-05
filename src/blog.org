@@ -1,6 +1,7 @@
 #+title: blog
 
 ** 2016
+- 201710 [[file:blogs/the-times-they-are-changing.org][The Times They Are A-Changin']] by Bob Dylan
 - 201710 [[file:blogs/level-up-lang-taste.org][讲一件提升语言格调的小事]]
 - 201710 [[file:./blogs/the-effective-engineer-by-edmond-lau.org][The Effective Engineer]]
 - 201710 [[file:./blogs/taking-php-seriously.org][Taking PHP Seriously]]

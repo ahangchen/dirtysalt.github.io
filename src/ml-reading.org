@@ -597,3 +597,7 @@ Deep Learning 其實不只能拿來做視覺辨識，它在自然語言、推薦
 6. http://colah.github.io/
 7. http://cs231n.stanford.edu/
 8. http://russellsstewart.com/blog/0
+
+** Generative Adversarial Networks: The Basic Idea
+
+file:./images/GAN-basic-idea.jpg
