@@ -498,3 +498,4 @@
 - [[file:./blogs/majority-of-silent-people.org][沉默的大多数]] by 王小波
 - [[file:./blogs/mac-talk.org][MacTalk]] by 池建强
 - [[file:./blogs/zhihu-hft-engineer.org][我是高频交易工程师：知乎董可人自选集]]
+- [[file:./the-times-of-intelligence.org][智能时代]] by wujun
